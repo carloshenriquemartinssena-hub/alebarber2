@@ -1,0 +1,367 @@
+@charset "utf-8";
+
+body, header  {
+    background: black;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+h1 { font-family: "Kolker Brush", cursive;
+color:white;
+font-weight:400;
+font-size: 45pt;}
+
+.cortes {
+position: relative; 
+    top: -4.7vh;
+margin-left:10%;}
+
+.linha { 
+  padding-left: 5%;
+width:100%; 
+position: relative;
+top: -7vh;}
+
+.nave {
+display: block; 
+color:white; }
+
+.logo { 
+color:#FF6C11;
+font-size:180%; }
+a{ color: white;
+    font-size:25pt ;
+ }
+
+
+ .foto { max-width:103%;
+    height: auto;
+    margin-left: -2%;}
+
+.botao { 
+    margin-bottom: 20%;
+    position: relative;
+    top: -7vh;
+    margin-left: 15%;
+      font-family: "Kolker Brush",;
+    color: white;
+    font-weight: 800;
+background:#FF6C11;
+padding: 20px 30px 20px 30px;
+border-radius: 9px}
+
+.botaoo { 
+    text-decoration: none;
+font-size:100%; 
+text-wrap: nowrap;}
+
+
+#frame2 {
+background:#D9D9D9;
+max-width: 100% auto;
+min-height:110vh; 
+margin: -2vh;
+padding: 0;
+}
+
+.o  { 
+    font-size: 200%;
+    color: #FF6C11;
+   font-family: "Konkhmer Sleokchher", system-ui;
+    font-weight: 800;
+}
+
+.text2 {
+    margin-bottom: 0 auto;
+margin-left: -15%; 
+    padding-top: 10%;
+    line-height: 120%;
+    font-size: 150%;
+    font-family:"Konkhmer Sleokchher", system-ui; ;
+color:#FF6C11;
+display:block;
+text-align:center; }
+
+.c {
+    position: relative;
+    top: 50%;
+    margin-left: 52.2%;
+ position: absolute;
+    display: block;
+    color: #FF6C11;
+    font-size:200%;
+font-weight:800;
+line-height:0%;
+margin-bottom: 0 auto; }
+
+.text3 { position: relative;
+    line-height: 320%;
+    font-family:"Konkhmer Sleokchher", system-ui;
+
+color: black;
+display: block;
+text-align: center;
+margin-left: 9vh;
+top: -4vh;
+font-size: 150%;
+margin-bottom: 0 auto;}
+
+.orte { color: #FF6C11;}
+
+.linhafina { 
+margin-top:-5vh;
+background-color:#454545;
+width:100%;
+height:1px; }
+
+.trab { 
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1.0);
+width:70%;
+margin: 2vh;
+margin-left: 3.5vh;
+animation: zoom-in 0.8s ease forwards;
+transition: transform 0.4s;
+ }
+
+@keyframes zoom-in { 
+from { transform:scale(0.8); opacity:0 }
+to { transform:scale(1); opacity:1; } }
+
+img:active  {
+    transform: scale(1.9);
+}
+
+ .linhafina2 { 
+ background: #606060;
+color: black;
+height: 0.2vh;
+width: 100%;
+}
+
+.text4 {
+    line-height: 5vh;
+text-align: center; 
+    color: black;
+ font-family:"Konkhmer Sleokchher", system-ui;
+ font-size:150% }
+
+.laranja { 
+color: #FF6C11;
+ }
+
+ #frame3 { 
+ background:#d9d9d9;
+ max-width:100% auto;
+ min-height:100vh;
+ margin: 2.2vh -2vh 0vh -2vh; }
+
+ .text5 { 
+ color:black;
+ font-size:35pt;
+ text-align:center; 
+padding-top: 5vh}
+
+.tabela{ 
+    max-width: 100% auto;
+     font-family:"Konkhmer Sleokchher", system-ui;
+    padding: 10%}
+
+    .alepraia { 
+        display: block;
+        margin-top: 4vh;
+    width:100% }
+
+    #frame4 { 
+    background:#d9d9d9;
+    max-width:100% auto;
+    min-height:1%;
+     margin: -4.5vh -2vh 0vh -2vh;
+     }
+
+    .text6 { 
+        color: black;
+        padding-top: 5vh;
+        margin-left: 15%;
+         font-family:"Konkhmer Sleokchher", system-ui;
+         font-size: 170%;
+}
+
+.agendamento {
+    line-height: 2vh;
+    margin-left: 5vh;
+   color: #FF6C11;
+    display: block;
+}
+
+.secao-form {
+    position: relative;
+  top:-30vh;
+  padding-top: 30px;
+}
+
+  #formAgenda {
+
+    max-width: 100% auto;
+    margin-top: 30vh;
+    padding: 20px;
+    background: linear-gradient(to bottom, #d9d9d9, #9A6A00);
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+  }
+
+  /* Labels */
+  #formAgenda label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+    text-align: left;
+  }
+
+  /* Inputs modernos */
+  #formAgenda input,
+  #formAgenda select {
+    width: 92%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 15px;
+    transition: all 0.2s ease;
+  }
+
+  /* Efeito ao clicar */
+  #formAgenda input:focus,
+  #formAgenda select:focus {
+    border-color: #00a86b;
+    box-shadow: 0px 0px 8px rgba(0,168,107,0.3);
+  }
+
+  /* Checkbox estilizado */
+  .extra {
+    margin-right: 8px;
+  }
+
+  /* Botão moderno */
+  #formAgenda button {
+    width: 100%;
+    padding: 14px;
+    background: #00a86b;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  #formAgenda button:hover {
+    background: #008f5d;
+  }
+
+  /* Texto de confirmação */
+  #confirmacao {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+  .descontos {  
+   text-decoration: underline 2px;
+  text-align:center;
+  font-family:Konkhmer Sleokchher, sans-serif;
+ color: #7E0303;}
+
+ .off {
+ text-wrap: nowrap; 
+    font-size: 100%;
+ text-align:center;
+ font-family:Konkhmer Sleokchher, sans-serif;
+ font-weight:500;
+ color:yellow;
+text-shadow:#000 1px 1px;
+}
+
+.frame5 { 
+min-height: 100vh;  
+max-width:100% auto;}
+
+.fbs  {
+    padding-top: 10%;
+    text-align: center  ;
+    font-family:Konkhmer Sleokchher, sans-serif;
+    font-size: 150%;
+}
+.clientes {
+    
+display: block; 
+color:#FF6C11; 
+font-family:"Kolker Brush", sans-serif;
+font-size: 220%;
+margin-top: -13%;
+margin-left: 50%;
+transform: rotate(-15deg);}
+
+#frame6 { 
+background-color:#484848;
+min-height:100vh;
+max-width: 100%;
+
+}
+.informacoes{ 
+text-align:center; 
+font-family:Konkhmer Sleokchher, sans-serif;
+font-size:150% ;
+padding-top: 10%;
+}
+
+.info { 
+    text-decoration: none;
+    padding-left: 5%;
+    line-height: 300%;
+color:white;
+font-family:Konkhmer Sleokchher, sans-serif;
+font-weight: 100;
+gap: 15px; }
+
+.link { 
+font-size:100% ;
+padding-left: 2%;
+text-decoration: none;}
+
+.maps { 
+margin-top:20%;
+margin-left:3%; }
+
+.rodape {
+    text-decoration: none;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 25px 10px;
+  font-family: Arial, sans-serif;
+  margin-top: 40px;
+}
+
+.rodape .autor {
+  color: #FF6C11;
+  font-weight: bold;
+}
+
+/*comentários*/
+
+
+
