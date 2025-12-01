@@ -392,18 +392,30 @@ alert("Preencha todos os campos e selecione as estrelas.");
 return;
 }
 
-
-body: JSON.stringify({
+    fetch(scriptURL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
             nome: nome,
             comentario: comentario,
             rating: estrelasSelecionadas
         })
     })
-    .then(res => res.json())
+    .then(res => res.text())
     .then(data => {
         alert("Avaliação enviada com sucesso!");
+
+        // limpa os campos
+        document.getElementById('nomeReview').value = "";
+        document.getElementById('comentarioReview').value = "";
+        estrelasSelecionadas = 0;
+        document.querySelectorAll('#starRating span').forEach(s => s.classList.remove('selected'));
     })
-    .catch(err => alert("Erro ao enviar avaliação."));
+    .catch(err => {
+        alert("Erro ao enviar avaliação.");
+        console.error(err);
+    });
+});
 
 
 </script>
@@ -427,5 +439,6 @@ body: JSON.stringify({
   <p>© 2025 Alewon Barber — Todos os direitos reservados.</p>
   <p>Desenvolvido por <span class="autor">Max Virelli</span></p>
 </footer>
+
 
 </body>
