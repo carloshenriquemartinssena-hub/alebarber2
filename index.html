@@ -40,7 +40,6 @@
 <style>
   .header {
     background: #111;
-    padding: 10px;
   }
 
   .navbar {
@@ -115,12 +114,13 @@
 </script>
     <div id="diminuir">
     <img class="foto" src="ale3.png">
+    
   </div>
 
   <h1 class="cortes">Cortes à Domicílio</h1>
   <img class="linha" src="linhared.png">
 
-  <button class="botao">
+  <button class="bota1">
     <a href="#frame4" class="botaoo">Faça seu agendamento</a>
   </button>
   </header>
@@ -304,7 +304,7 @@ function enviarWhatsApp() {
 <p class="off">Garanta 10% OFF por indicação</p>
   </section>
 
-  <section id#="frame5">
+  <section id="frame5">
     
     <h1 class="fbs">Feebacks<span class="clientes">Clientes</span></h1>
     <section id="reviews-section" class="reviews-container">
@@ -379,7 +379,7 @@ document.querySelectorAll('#starRating span')[i].classList.add('selected');
 
 
 // ⭐ 3.2 ENVIAR AVALIAÇÃO PARA GOOGLE SHEETS
-const scriptURL = "https://script.google.com/macros/s/AKfycbz0PnxROHG3QgO8KYiUULVcmuDVqeA5LE05uNwxjZEi/dev";
+const scriptURL = "https://script.google.com/macros/s/AKfycbxXURgH0KVKUV3K2fYWi2ukgucVdP3PdvnLNGWGb-ydIoXEV3PDZ8qXZJmQYuS4fqEcFQ/exec";
 
 
 document.getElementById('enviarReview').addEventListener('click', function() {
@@ -393,8 +393,19 @@ return;
 }
 
 
-fetch(scriptURL, {
-method: 'POST',
+body: JSON.stringify({
+            nome: nome,
+            comentario: comentario,
+            rating: estrelasSelecionadas
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert("Avaliação enviada com sucesso!");
+    })
+    .catch(err => alert("Erro ao enviar avaliação."));
+
+
 </script>
 
   </section>

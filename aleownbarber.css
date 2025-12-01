@@ -41,22 +41,23 @@ a{ color: white;
     font-size:25pt ;
  }
 
-
- .foto { max-width:103%;
+.desktop_only { 
+display:none; }
+ .foto {
+  max-width:103%;
     height: auto;
     margin-left: -2%;}
 
-.botao { 
-    margin-bottom: 20%;
+.bota1 { 
     position: relative;
-    top: -7vh;
-    margin-left: 15%;
-      font-family: "Kolker Brush",;
-    color: white;
-    font-weight: 800;
-background:#FF6C11;
+background:#FF6C11; 
+   font-family: "Kolker Brush",;
+margin-bottom: 20%;
+top: -7vh;
 padding: 20px 30px 20px 30px;
-border-radius: 9px}
+border-radius: 9px;
+    margin-left: 15%;
+ font-weight: 800;}
 
 .botaoo { 
     text-decoration: none;
@@ -67,7 +68,7 @@ text-wrap: nowrap;}
 #frame2 {
 background:#D9D9D9;
 max-width: 100% auto;
-min-height:110vh; 
+min-height:10vh; 
 margin: -2vh;
 padding: 0;
 }
@@ -295,7 +296,7 @@ padding-top: 5vh}
 text-shadow:#000 1px 1px;
 }
 
-.frame5 { 
+#frame5 { 
 min-height: 100vh;  
 max-width:100% auto;}
 
@@ -361,7 +362,57 @@ margin-left:3%; }
   font-weight: bold;
 }
 
-/*comentários*/
+/*desktop*/
 
+@media (min-width: 1023px) and (min-width: 1440px) {
+    header{ background-image:url(pitaprimorado.png); background-repeat: no-repeat;
+       background-size: cover;
+      height: 120x;
+padding-bottom: 600px;
+        }
+
+   .foto { display:none; }
+   .desktop_only { 
+   display:block; }
+   .cortes { 
+    display: block;
+
+    text-align:center;
+   color:black;
+   font-size:500%; 
+margin-top: -50;}
+}
+
+.navbar { 
+background:black;
+padding:20px;
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }}
+
+.header { 
+background:black; }
+
+ .menu a {
+    gap: 5px;
+ }
+
+ .botao { 
+    padding: 50px 200px 50px 200px;
+ margin-left:130vh;
+ display:block;
+ top: 80vh; }
+
+ .botaoo  {
+    display: inline-block;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+
+
+
+ }
+   
 
 
