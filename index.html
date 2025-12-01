@@ -289,7 +289,7 @@ function enviarWhatsApp() {
     "Extras: " + (extrasSelecionados.length ? extrasSelecionados.join(", ") : "Nenhum") + "%0A%0A" +
     "Total: R$ " + total;
 
-  const numeroBarbeiro = "5511958458614"; // EX: 5581988877665
+  const numeroBarbeiro = "5511960248301"; // EX: 5581988877665
 
   // Enviar para WhatsApp
   const url = "https://wa.me/" + numeroBarbeiro + "?text=" + mensagem;
@@ -392,6 +392,12 @@ alert("Preencha todos os campos e selecione as estrelas.");
 return;
 }
 
+  
+    let formData = new FormData();
+    formData.append("nome", nome);
+    formData.append("comentario", comentario);
+    formData.append("estrelas", estrelasSelecionadas);
+  
     fetch(scriptURL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -442,3 +448,4 @@ return;
 
 
 </body>
+
