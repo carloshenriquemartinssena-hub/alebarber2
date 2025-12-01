@@ -289,7 +289,7 @@ function enviarWhatsApp() {
     "Extras: " + (extrasSelecionados.length ? extrasSelecionados.join(", ") : "Nenhum") + "%0A%0A" +
     "Total: R$ " + total;
 
-  const numeroBarbeiro = "5511960248301"; // EX: 5581988877665
+  const numeroBarbeiro = "5511958458614"; // EX: 5581988877665
 
   // Enviar para WhatsApp
   const url = "https://wa.me/" + numeroBarbeiro + "?text=" + mensagem;
@@ -357,30 +357,25 @@ function enviarWhatsApp() {
 
 
 
-<!-- ===================================== -->
-<!-- 3️⃣ JAVASCRIPT -->
-<!-- ===================================== -->
 <script>
 let estrelasSelecionadas = 0;
 
-
-// ⭐ 3.1 Seleção de Estrelas
+// ⭐ Seleção de estrelas
 document.querySelectorAll('#starRating span').forEach(star => {
-star.addEventListener('click', function() {
-estrelasSelecionadas = this.getAttribute('data-star');
-document.querySelectorAll('#starRating span').forEach(s => s.classList.remove('selected'));
-for (let i = 0; i < estrelasSelecionadas; i++) {
-document.querySelectorAll('#starRating span')[i].classList.add('selected');
-}
+    star.addEventListener('click', function () {
+        estrelasSelecionadas = this.getAttribute('data-star');
+        document.querySelectorAll('#starRating span').forEach(s => s.classList.remove('selected'));
+        for (let i = 0; i < estrelasSelecionadas; i++) {
+            document.querySelectorAll('#starRating span')[i].classList.add('selected');
+        }
+    });
 });
-});
 
+// ⭐ ENVIAR PARA GOOGLE SHEETS
+const scriptURL = "https://script.google.com/macros/s/AKfycbxXURgH0KVKUV3K2fYWi2ukgucVdP3PdvnLNGWGb-ydIoXEV3PDZ8qXZJmQYuS4fqEcFQ/exec";
 
+document.getElementById('enviarReview').addEventListener('click', function () {
 
-
-const scriptURL = "https://script.google.com/macros/s/AKfycbw6FOa1fEN4IXdCTuXTrLSN0BDQdodzYwIdPVLnh0TEuxH3oCWGCJ948qwaW5yme8pTsg/exec";
-
-document.getElementById('enviarReview').addEventListener('click', function() {
     const nome = document.getElementById('nomeReview').value;
     const comentario = document.getElementById('comentarioReview').value;
 
@@ -389,18 +384,56 @@ document.getElementById('enviarReview').addEventListener('click', function() {
         return;
     }
 
-    let formData = new FormData();
-    formData.append("nome", nome);
-    formData.append("comentario", comentario);
-    formData.append("estrelas", estrelasSelecionadas);
-
-    fetch(scriptURL, { method: 'POST', body: formData })
-        .then(res => res.text())
-        .then(() => {
-            alert("Avaliação enviada!");
+    fetch(scriptURL, {
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            nome: nome,
+            comentario: comentario,
+            estrelas: estrelasSelecionadas
         })
-        .catch(err => alert("Erro: " + err));
+    })
+    .then(res => res.text())
+    .then(() => {
+        alert("Avaliação enviada com sucesso!");
+        document.getElementById('nomeReview').value = "";
+        document.getElementById('comentarioReview').value = "";
+        estrelasSelecionadas = 0;
+        document.querySelectorAll('#starRating span').forEach(s => s.classList.remove('selected'));
+
+        carregarAvaliacoes(); // Atualiza a lista automaticamente
+    })
+    .catch(err => alert("Erro ao enviar: " + err));
 });
+
+// ⭐ CARREGAR 5 AVALIAÇÕES MAIS RECENTES
+function carregarAvaliacoes() {
+    fetch("https://script.google.com/macros/s/AKfycbxDFR3IiHh5N-d9Nm8iZn5nPCEXodzt5QF4uxwKGcDdNusFkMvVM-HYcW2aWPcig5Hf9g/exec")
+        .then(res => res.json())
+        .then(avaliacoes => {
+            const lista = document.getElementById("listaAvaliacoes");
+            lista.innerHTML = "";
+
+            // pega só as 5 mais recentes
+            avaliacoes.slice(-5).reverse().forEach(av => {
+                const item = document.createElement("div");
+                item.classList.add("item-avaliacao");
+
+                item.innerHTML = `
+                    <strong>${av.nome}</strong><br>
+                    <span class="estrelas-exibicao">${"★".repeat(av.estrelas)}</span>
+                    <p>${av.comentario}</p>
+                `;
+
+                lista.appendChild(item);
+            });
+        });
+}
+
+// carrega ao abrir o site
+carregarAvaliacoes();
+</script>
+
 
 
 </script>
@@ -425,10 +458,4 @@ document.getElementById('enviarReview').addEventListener('click', function() {
   <p>Desenvolvido por <span class="autor">Max Virelli</span></p>
 </footer>
 
-
 </body>
-
-
-
-
-
