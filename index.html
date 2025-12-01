@@ -378,49 +378,28 @@ document.querySelectorAll('#starRating span')[i].classList.add('selected');
 
 
 
-// ⭐ 3.2 ENVIAR AVALIAÇÃO PARA GOOGLE SHEETS
 const scriptURL = "https://script.google.com/macros/s/AKfycbw6FOa1fEN4IXdCTuXTrLSN0BDQdodzYwIdPVLnh0TEuxH3oCWGCJ948qwaW5yme8pTsg/exec";
 
-
 document.getElementById('enviarReview').addEventListener('click', function() {
-const nome = document.getElementById('nomeReview').value;
-const comentario = document.getElementById('comentarioReview').value;
+    const nome = document.getElementById('nomeReview').value;
+    const comentario = document.getElementById('comentarioReview').value;
 
+    if (!nome || !comentario || estrelasSelecionadas === 0) {
+        alert("Preencha todos os campos e selecione as estrelas.");
+        return;
+    }
 
-if (!nome || !comentario || estrelasSelecionadas === 0) {
-alert("Preencha todos os campos e selecione as estrelas.");
-return;
-}
-
-  
     let formData = new FormData();
     formData.append("nome", nome);
     formData.append("comentario", comentario);
     formData.append("estrelas", estrelasSelecionadas);
-  
-    fetch(scriptURL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            nome: nome,
-            comentario: comentario,
-            rating: estrelasSelecionadas
-        })
-    })
-    .then(res => res.text())
-    .then(data => {
-        alert("Avaliação enviada com sucesso!");
 
-        // limpa os campos
-        document.getElementById('nomeReview').value = "";
-        document.getElementById('comentarioReview').value = "";
-        estrelasSelecionadas = 0;
-        document.querySelectorAll('#starRating span').forEach(s => s.classList.remove('selected'));
-    })
-    .catch(err => {
-        alert("Erro ao enviar avaliação.");
-        console.error(err);
-    });
+    fetch(scriptURL, { method: 'POST', body: formData })
+        .then(res => res.text())
+        .then(() => {
+            alert("Avaliação enviada!");
+        })
+        .catch(err => alert("Erro: " + err));
 });
 
 
@@ -448,6 +427,7 @@ return;
 
 
 </body>
+
 
 
 
