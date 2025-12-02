@@ -300,6 +300,12 @@ text-shadow:#000 1px 1px;
 min-height: 100vh;  
 max-width:100% auto;}
 
+.reviews-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+
 .fbs  {
     padding-top: 10%;
     text-align: center  ;

@@ -1,461 +1,338 @@
-<!DOCTYPE html>
-  <html lang="pt-br">
-  <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="stylesheet" href="aleownbarber.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Konkhmer+Sleokchher&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="aleownbarber.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Konkhmer+Sleokchher&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-<title> Alebarber </title>
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <title> Alebarber </title>
+  </head>
 
-<body>
-  <header class="hero">
-<!-- MENU HAMBÚRGUER RESPONSIVO COMPLETO -->
+  <body>
+    <header class="hero">
+  <!-- MENU HAMBÚRGUER RESPONSIVO COMPLETO -->
 
-<!-- 🔹 HTML DO MENU -->
-<header class="header">
-  <nav class="navbar">
-    <h1 class="logo">Alewon Barber</h1>
+  <!-- 🔹 HTML DO MENU -->
+  <header class="header">
+    <nav class="navbar">
+      <h1 class="logo">Alewon Barber</h1>
 
-    <!-- Botão Hamburguer -->
-    <div class="hamburguer" id="btnMenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+      <!-- Botão Hamburguer -->
+      <div class="hamburguer" id="btnMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-    <!-- Links do Menu -->
-    <ul class="menu" id="menuMobile">
-      <li><a href="#frame1">Início</a></li>
-      <li><a href="#frame2">Serviços</a></li>
-      <li><a href="#frame4">Avaliações</a></li>
-      <li><a href="#frame6">Contato</a></li>
-    </ul>
-  </nav>
-</header>
-
-<!-- 🔹 CSS DO MENU HAMBÚRGUER -->
-<style>
-  .header {
-    background: #111;
-  }
-
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-
-  /* estilo do botão hamburguer */
-  .hamburguer {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
-  }
-
-  .hamburguer span {
-    width: 28px;
-    height: 2px;
-    background: white;
-    border-radius: 5px;
-    transition: .3s;
-  }
-
-  /* lista padrão desktop */
-  .menu {
-    list-style: none;
-    display: flex;
-    gap: 2px;
-  }
-
-  .menu li a {
-    font-family: "Konkhmer Sleokchher", system-ui;;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-
-  /* MOBILE */
-  @media(max-width: 768px) {
-    .hamburguer { display: flex; }
-
-    .menu {
-      position: absolute;
-      top: 70px;
-      right: 0;
-      width: 200px;
-      background: #111;
-      flex-direction: column;
-      display: none;
-      padding: 20px;
-      gap: 20px;
-      border-left: 2px solid #FF6C11;
-      border-bottom: 2px solid #FF6C11;
-    }
-
-    .menu.show {
-      display: flex;
-    }
-  }
-</style>
-
-<!-- 🔹 JAVASCRIPT PARA FUNCIONAR -->
-<script>
-  const btn = document.getElementById("btnMenu");
-  const menu = document.getElementById("menuMobile");
-
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("show");
-  });
-</script>
-    <div id="diminuir">
-    <img class="foto" src="ale3.png">
-    
-  </div>
-
-  <h1 class="cortes">Cortes à Domicílio</h1>
-  <img class="linha" src="linhared.png">
-
-  <button class="bota1">
-    <a href="#frame4" class="botaoo">Faça seu agendamento</a>
-  </button>
+      <!-- Links do Menu -->
+      <ul class="menu" id="menuMobile">
+        <li><a href="#frame1">Início</a></li>
+        <li><a href="#frame2">Serviços</a></li>
+        <li><a href="#frame5">Avaliações</a></li>
+        <li><a href="#frame6">Contato</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="frame2">
-    <h1 class="text2"><span class="o">O</span>stentação<br></h1><h1 class="text3">em cada<span class="c">C</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="orte">orte</span></h1>
-
-    <div class="linhafina"></div>
-
-    <table>
-      <tr>
-        <td id="trabalhos">
-
-      <img class="trab" src="pit-foto.jpg">
-      <img class="trab" src="pit-foto.jpg">
-<img class="trab" src="pit-foto.jpg" >
-</td>
-
-<td>
-<img class="trab" src="pit-foto.jpg">
-<img class="trab" src="pit-foto.jpg">
-<img class="trab" src="pit-foto.jpg">
-</td>
-</tr>
-</table>
-    
-
-    <div class="linhafina2"></div>
-
-    <h1 class="text4"> com os <span class="laranja"> Melhores<br>Equipamentos</span></h1>
-  </section>
-
-  <section id="frame3">
-    <h1 class="text5"> Tabela de Precificação</h1>
-
- <table class="tabela" width="100%" cellspacing="0" cellpadding="6" border="0">
-  <tr>
-    <td>Corte Simples</td>
-    <td align="right"><b>R$ 0,00</b></td>
-  </tr>
-
-  <tr>
-    <td>Barba</td>
-    <td align="right"><b>R$ 0,00</b></td>
-  </tr>
-
-  <tr>
-    <td>Navalha</td>
-    <td align="right"><b>R$ 0,00</b></td>
-  </tr>
-
-    <tr>
-    <td>Hidratação</td>
-    <td align="right"><b>R$ 0,00</b></td>
-  </tr>
-
-  <tr>
-    <td>Corte + Barba</td>
-    <td align="right"><b>R$ 0,00</b></td>
-  </tr>
-
-  <tr>
-    <td>Completo</td>
-    <td align="right"><b>R$ 0,00</b></td>
-  </tr>
-
-  <tr>
-    <td>Tratamento VIP</td>
-    <td align="right"><b>R$ 0,00</b></td>
-  </tr>
-
-</table>
-
-<img class="alepraia" src="alepraia.png">
-  </section>
-
-  <section id="frame4">
-    <h1 class="text6">Faça seu<span class="agendamento">Agendamento</span></h1>
-
-    <div class="secao-form">
-
-<form id="formAgenda">
-  <label>Nome:</label><br>
-  <input type="text" id="nome" required><br><br>
-
-  <label>Endereço:</label><br>
-  <input type="text" id="endereco" required><br><br>
-
-  <label>WhatsApp:</label><br>
-  <input type="text" id="whatsapp" required><br><br>
-
-  <label>Data do Corte:</label><br>
-  <input type="date" id="data" required><br><br>
-
-  <label>Horário:</label><br>
-  <input type="time" id="horario" required><br><br>
-
-  <label>Serviço:</label><br>
-  <select id="servico" onchange="calcularTotal()" required>
-    <option value="" data-preco="0">Selecione...</option>
-    <option value="Corte" data-preco="30">Corte — R$ 30</option>
-    <option value="Barba" data-preco="20">Barba — R$ 20</option>
-    <option value="Corte + Barba" data-preco="45">Corte + Barba — R$ 45</option>
-    <option value="Sobrancelha" data-preco="10">Sobrancelha — R$ 10</option>
-  </select>
-  <br><br>
-
-  <label>Extras:</label><br>
-  <input type="checkbox" class="extra" value="Hidratação" data-preco="15" onchange="calcularTotal()"> Hidratação — R$ 15 <br>
-  <input type="checkbox" class="extra" value="Peeling Facial" data-preco="25" onchange="calcularTotal()"> Peeling Facial — R$ 25 <br>
-  <input type="checkbox" class="extra" value="Massagem Facial" data-preco="15" onchange="calcularTotal()"> Massagem Facial — R$ 15 <br>
-  <br>
-
-  <h3>Total: R$ <span id="total">0</span></h3>
-
-  <button type="button" onclick="enviarWhatsApp()">Agendar</button>
-</form>
-
-<p id="confirmacao" style="color:green; font-weight:bold;"></p>
-
-<script>
-function calcularTotal() {
-  let total = 0;
-
-  // Serviço
-  const servico = document.getElementById("servico");
-  total += Number(servico.options[servico.selectedIndex].dataset.preco);
-
-  // Extras
-  const extras = document.querySelectorAll(".extra:checked");
-  extras.forEach(e => {
-    total += Number(e.dataset.preco);
-  });
-
-  document.getElementById("total").innerText = total;
-}
-
-function enviarWhatsApp() {
-  const nome = document.getElementById("nome").value;
-  const endereco = document.getElementById("endereco").value;
-  const whatsapp = document.getElementById("whatsapp").value;
-  const data = document.getElementById("data").value;
-  const horario = document.getElementById("horario").value;
-
-  const servicoSelect = document.getElementById("servico");
-  const servico = servicoSelect.value;
-
-  const extrasSelecionados = [];
-  document.querySelectorAll(".extra:checked").forEach(e => extrasSelecionados.push(e.value));
-
-  const total = document.getElementById("total").innerText;
-
-  if (!nome || !endereco || !whatsapp || !data || !horario || !servico) {
-    alert("Por favor, preencha todos os campos obrigatórios.");
-    return;
-  }
-
-  let mensagem = 
-    "✨ Novo Agendamento! ✂%0A%0A" +
-    "Cliente: " + nome + "%0A" +
-    "Endereço: " + endereco + "%0A" +
-    "WhatsApp: " + whatsapp + "%0A" +
-    "Data: " + data + "%0A" +
-    "Horário: " + horario + "%0A" +
-    "Serviço: " + servico + "%0A" +
-    "Extras: " + (extrasSelecionados.length ? extrasSelecionados.join(", ") : "Nenhum") + "%0A%0A" +
-    "Total: R$ " + total;
-
-  const numeroBarbeiro = "5511958458614"; // EX: 5581988877665
-
-  // Enviar para WhatsApp
-  const url = "https://wa.me/" + numeroBarbeiro + "?text=" + mensagem;
-  window.open(url, "_blank");
-
-  // Mensagem de confirmação
-  document.getElementById("confirmacao").innerText = "Agendamento confirmado! Seu barbeiro recebeu todas as informações.";
-}
-</script>
-
-<h3 class="descontos">Ganhe Descontos!</h3>
-<p class="off">Garanta 10% OFF por indicação</p>
-  </section>
-
-  <section id="frame5">
-    
-    <h1 class="fbs">Feebacks<span class="clientes">Clientes</span></h1>
-    <section id="reviews-section" class="reviews-container">
-<h2 class="titulo-avaliacoes">Avaliações dos Clientes</h2>
-
-
-<div class="review-form">
-<h3>Deixe sua Avaliação</h3>
-
-
-<div class="star-rating" id="starRating">
-<span data-star="1">★</span>
-<span data-star="2">★</span>
-<span data-star="3">★</span>
-<span data-star="4">★</span>
-<span data-star="5">★</span>
-</div>
-
-
-<input type="text" id="nomeReview" placeholder="Seu nome" required>
-<textarea id="comentarioReview" placeholder="Escreva seu comentário" required></textarea>
-
-
-<button id="enviarReview">Enviar Avaliação</button>
-</div>
-
-
-<div id="listaAvaliacoes" class="lista-avaliacoes"></div>
-</section>
-
-
-
-
-<!-- ===================================== -->
-<!-- 2️⃣ ESTILOS (CSS) -->
-<!-- ===================================== -->
-<style>
-.reviews-container { background: #222; padding: 40px 20px; color: white; font-family: Arial; }
-.titulo-avaliacoes { text-align: center; font-size: 30px; margin-bottom: 25px; }
-.review-form { background: #333; padding: 20px; border-radius: 10px; max-width: 500px; margin: auto; margin-bottom: 40px; }
-.review-form input, .review-form textarea { width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: none; }
-#enviarReview { width: 100%; padding: 12px; margin-top: 15px; background: #FF6C11; border: none; color: white; border-radius: 8px; cursor: pointer; }
-.star-rating span { font-size: 35px; cursor: pointer; color: #555; transition: 0.2s; }
-.star-rating span.selected { color: #FF6C11; }
-.lista-avaliacoes { max-height: 350px; overflow-y: auto; background: #333; padding: 15px; border-radius: 10px; }
-.item-avaliacao { background: #444; padding: 15px; border-radius: 8px; margin-bottom: 15px; }
-.estrelas-exibicao { color: #FF6C11; font-size: 20px; }
-</style>
-
-
-
-
-<script>
-let estrelasSelecionadas = 0;
-
-// ⭐ Seleção de estrelas
-document.querySelectorAll('#starRating span').forEach(star => {
-    star.addEventListener('click', function () {
-        estrelasSelecionadas = this.getAttribute('data-star');
-        document.querySelectorAll('#starRating span').forEach(s => s.classList.remove('selected'));
-        for (let i = 0; i < estrelasSelecionadas; i++) {
-            document.querySelectorAll('#starRating span')[i].classList.add('selected');
-        }
-    });
-});
-
-// ⭐ ENVIAR PARA GOOGLE SHEETS
-const scriptURL = "https://script.google.com/macros/s/AKfycbxXURgH0KVKUV3K2fYWi2ukgucVdP3PdvnLNGWGb-ydIoXEV3PDZ8qXZJmQYuS4fqEcFQ/exec";
-
-document.getElementById('enviarReview').addEventListener('click', function () {
-
-    const nome = document.getElementById('nomeReview').value;
-    const comentario = document.getElementById('comentarioReview').value;
-
-    if (!nome || !comentario || estrelasSelecionadas === 0) {
-        alert("Preencha todos os campos e selecione as estrelas.");
-        return;
+  <!-- 🔹 CSS DO MENU HAMBÚRGUER -->
+  <style>
+    .header {
+      background: #111;
     }
 
-    fetch(scriptURL, {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            nome: nome,
-            comentario: comentario,
-            estrelas: estrelasSelecionadas
-        })
-    })
-    .then(res => res.text())
-    .then(() => {
-        alert("Avaliação enviada com sucesso!");
-        document.getElementById('nomeReview').value = "";
-        document.getElementById('comentarioReview').value = "";
-        estrelasSelecionadas = 0;
-        document.querySelectorAll('#starRating span').forEach(s => s.classList.remove('selected'));
-
-        carregarAvaliacoes(); // Atualiza a lista automaticamente
-    })
-    .catch(err => alert("Erro ao enviar: " + err));
-});
-
-// ⭐ CARREGAR 5 AVALIAÇÕES MAIS RECENTES
-function carregarAvaliacoes() {
-    fetch("https://script.google.com/macros/s/AKfycbxDFR3IiHh5N-d9Nm8iZn5nPCEXodzt5QF4uxwKGcDdNusFkMvVM-HYcW2aWPcig5Hf9g/exec")
-        .then(res => res.json())
-        .then(avaliacoes => {
-            const lista = document.getElementById("listaAvaliacoes");
-            lista.innerHTML = "";
-
-            // pega só as 5 mais recentes
-            avaliacoes.slice(-5).reverse().forEach(av => {
-                const item = document.createElement("div");
-                item.classList.add("item-avaliacao");
-
-                item.innerHTML = `
-                    <strong>${av.nome}</strong><br>
-                    <span class="estrelas-exibicao">${"★".repeat(av.estrelas)}</span>
-                    <p>${av.comentario}</p>
-                `;
-
-                lista.appendChild(item);
-            });
-        });
-}
-
-// carrega ao abrir o site
-carregarAvaliacoes();
-</script>
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
 
+    /* estilo do botão hamburguer */
+    .hamburguer {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+    }
 
-</script>
+    .hamburguer span {
+      width: 28px;
+      height: 2px;
+      background: white;
+      border-radius: 5px;
+      transition: .3s;
+    }
 
-  </section>
+    /* lista padrão desktop */
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 2px;
+    }
 
-  <section id="frame6">
-    <h1 class="informacoes"> Informações</h1>
+    .menu li a {
+      font-family: "Konkhmer Sleokchher", system-ui;;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
 
-    <ul class="info">
-      <li>contato:<a class="link" href="#">11 96024-8301</a></li>
-      <li>disponibilidade: Seg-Dom</li>
-      <li>Instagram:<a class="link" href="https://www.instagram.com/aleown_barber?igsh=MTZ4ZzQ3NnUzbWNkcg==">Aleown_barber</a></li>
+    /* MOBILE */
+    @media(max-width: 768px) {
+      .hamburguer { display: flex; }
 
-    </ul>
+      .menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        background: #111;
+        flex-direction: column;
+        display: none;
+        padding: 20px;
+        gap: 20px;
+        border-left: 2px solid #FF6C11;
+        border-bottom: 2px solid #FF6C11;
+      }
 
-    <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14627.536686082023!2d-46.41557279560646!3d-23.5726031434336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce659ca591b7a9%3A0xacc2483060dcb157!2sGuaianases%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1763505908717!5m2!1spt-BR!2sbr" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </section>
+      .menu.show {
+        display: flex;
+      }
+    }
+  </style>
 
-  <footer class="rodape">
-  <p>© 2025 Alewon Barber — Todos os direitos reservados.</p>
-  <p>Desenvolvido por <span class="autor">Max Virelli</span></p>
-</footer>
+  <!-- 🔹 JAVASCRIPT PARA FUNCIONAR -->
+  <script>
+    const btn = document.getElementById("btnMenu");
+    const menu = document.getElementById("menuMobile");
 
-</body>
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("show");
+    });
+  </script>
+      <div id="diminuir">
+      <img class="foto" src="ale3.png">
+      
+    </div>
+
+    <h1 class="cortes">Cortes à Domicílio</h1>
+    <img class="linha" src="linhared.png">
+
+    <button class="bota1">
+      <a href="#frame4" class="botaoo">Faça seu agendamento</a>
+    </button>
+    </header>
+
+    <section id="frame2">
+      <h1 class="text2"><span class="o">O</span>stentação<br></h1><h1 class="text3">em cada<span class="c">C</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="orte">orte</span></h1>
+
+      <div class="linhafina"></div>
+
+      <table>
+        <tr>
+          <td id="trabalhos">
+
+        <img class="trab" src="pit-foto.jpg">
+        <img class="trab" src="pit-foto.jpg">
+  <img class="trab" src="pit-foto.jpg" >
+  </td>
+
+  <td>
+  <img class="trab" src="pit-foto.jpg">
+  <img class="trab" src="pit-foto.jpg">
+  <img class="trab" src="pit-foto.jpg">
+  </td>
+  </tr>
+  </table>
+      
+
+      <div class="linhafina2"></div>
+
+      <h1 class="text4"> com os <span class="laranja"> Melhores<br>Equipamentos</span></h1>
+    </section>
+
+    <section id="frame3">
+      <h1 class="text5"> Tabela de Precificação</h1>
+
+   <table class="tabela" width="100%" cellspacing="0" cellpadding="6" border="0">
+    <tr>
+      <td>Corte Simples</td>
+      <td align="right"><b>R$ 0,00</b></td>
+    </tr>
+
+    <tr>
+      <td>Barba</td>
+      <td align="right"><b>R$ 0,00</b></td>
+    </tr>
+
+    <tr>
+      <td>Navalha</td>
+      <td align="right"><b>R$ 0,00</b></td>
+    </tr>
+
+      <tr>
+      <td>Hidratação</td>
+      <td align="right"><b>R$ 0,00</b></td>
+    </tr>
+
+    <tr>
+      <td>Corte + Barba</td>
+      <td align="right"><b>R$ 0,00</b></td>
+    </tr>
+
+    <tr>
+      <td>Completo</td>
+      <td align="right"><b>R$ 0,00</b></td>
+    </tr>
+
+    <tr>
+      <td>Tratamento VIP</td>
+      <td align="right"><b>R$ 0,00</b></td>
+    </tr>
+
+  </table>
+
+  <img class="alepraia" src="alepraia.png">
+    </section>
+
+    <section id="frame4">
+      <h1 class="text6">Faça seu<span class="agendamento">Agendamento</span></h1>
+
+      <div class="secao-form">
+
+  <form id="formAgenda">
+    <label>Nome:</label><br>
+    <input type="text" id="nome" required><br><br>
+
+    <label>Endereço:</label><br>
+    <input type="text" id="endereco" required><br><br>
+
+    <label>WhatsApp:</label><br>
+    <input type="text" id="whatsapp" required><br><br>
+
+    <label>Data do Corte:</label><br>
+    <input type="date" id="data" required><br><br>
+
+    <label>Horário:</label><br>
+    <input type="time" id="horario" required><br><br>
+
+    <label>Serviço:</label><br>
+    <select id="servico" onchange="calcularTotal()" required>
+      <option value="" data-preco="0">Selecione...</option>
+      <option value="Corte" data-preco="30">Corte — R$ 30</option>
+      <option value="Barba" data-preco="20">Barba — R$ 20</option>
+      <option value="Corte + Barba" data-preco="45">Corte + Barba — R$ 45</option>
+      <option value="Sobrancelha" data-preco="10">Sobrancelha — R$ 10</option>
+    </select>
+    <br><br>
+
+    <label>Extras:</label><br>
+    <input type="checkbox" class="extra" value="Hidratação" data-preco="15" onchange="calcularTotal()"> Hidratação — R$ 15 <br>
+    <input type="checkbox" class="extra" value="Peeling Facial" data-preco="25" onchange="calcularTotal()"> Peeling Facial — R$ 25 <br>
+    <input type="checkbox" class="extra" value="Massagem Facial" data-preco="15" onchange="calcularTotal()"> Massagem Facial — R$ 15 <br>
+    <br>
+
+    <h3>Total: R$ <span id="total">0</span></h3>
+
+    <button type="button" onclick="enviarWhatsApp()">Agendar</button>
+  </form>
+
+  <p id="confirmacao" style="color:green; font-weight:bold;"></p>
+
+  <script>
+  function calcularTotal() {
+    let total = 0;
+
+    // Serviço
+    const servico = document.getElementById("servico");
+    total += Number(servico.options[servico.selectedIndex].dataset.preco);
+
+    // Extras
+    const extras = document.querySelectorAll(".extra:checked");
+    extras.forEach(e => {
+      total += Number(e.dataset.preco);
+    });
+
+    document.getElementById("total").innerText = total;
+  }
+
+  function enviarWhatsApp() {
+    const nome = document.getElementById("nome").value;
+    const endereco = document.getElementById("endereco").value;
+    const whatsapp = document.getElementById("whatsapp").value;
+    const data = document.getElementById("data").value;
+    const horario = document.getElementById("horario").value;
+
+    const servicoSelect = document.getElementById("servico");
+    const servico = servicoSelect.value;
+
+    const extrasSelecionados = [];
+    document.querySelectorAll(".extra:checked").forEach(e => extrasSelecionados.push(e.value));
+
+    const total = document.getElementById("total").innerText;
+
+    if (!nome || !endereco || !whatsapp || !data || !horario || !servico) {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+      return;
+    }
+
+    let mensagem = 
+      "✨ Novo Agendamento! ✂%0A%0A" +
+      "Cliente: " + nome + "%0A" +
+      "Endereço: " + endereco + "%0A" +
+      "WhatsApp: " + whatsapp + "%0A" +
+      "Data: " + data + "%0A" +
+      "Horário: " + horario + "%0A" +
+      "Serviço: " + servico + "%0A" +
+      "Extras: " + (extrasSelecionados.length ? extrasSelecionados.join(", ") : "Nenhum") + "%0A%0A" +
+      "Total: R$ " + total;
+
+    const numeroBarbeiro = "5511960248301"; // EX: 5581988877665
+
+    // Enviar para WhatsApp
+    const url = "https://wa.me/" + numeroBarbeiro + "?text=" + mensagem;
+    window.open(url, "_blank");
+
+    // Mensagem de confirmação
+    document.getElementById("confirmacao").innerText = "Agendamento confirmado! Seu barbeiro recebeu todas as informações.";
+  }
+  </script>
+
+  <h3 class="descontos">Ganhe Descontos!</h3>
+  <p class="off">Garanta 10% OFF por indicação</p>
+    </section>
+
+    <section id="frame5">
+      
+<!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<div class="reviews-container">
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-ef64c433-8035-4c97-a576-63ac4b4db4a5" data-elfsight-app-lazy></div>
+
+
+
+  </script>
+
+    </section>
+
+    <section id="frame6">
+      <h1 class="informacoes"> Informações</h1>
+
+      <ul class="info">
+        <li>contato:<a class="link" href="http://Wa.me/5511960248301">11 96024-8301</a></li>
+        <li>disponibilidade: Seg-Dom</li>
+        <li>Instagram:<a class="link" href="https://www.instagram.com/aleown_barber?igsh=MTZ4ZzQ3NnUzbWNkcg==">Aleown_barber</a></li>
+
+      </ul>
+
+      <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14627.536686082023!2d-46.41557279560646!3d-23.5726031434336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce659ca591b7a9%3A0xacc2483060dcb157!2sGuaianases%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1763505908717!5m2!1spt-BR!2sbr" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <footer class="rodape">
+    <p>© 2025 Alewon Barber — Todos os direitos reservados.</p>
+    <p>Desenvolvido por <span class="autor">Max Virelli</span></p>
+  </footer>
+
+  </body>
