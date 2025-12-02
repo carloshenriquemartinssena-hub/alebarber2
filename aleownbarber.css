@@ -217,6 +217,7 @@ padding-top: 5vh}
     width:100% }
 
     #frame4 { 
+        overflow: hidden;
     background:#d9d9d9;
     max-width:100% auto;
     min-height:1%;
@@ -455,21 +456,16 @@ background:black; }
 
  }
 
- .extra { 
-    margin: 2vh;
-    align-items: flex-start;
-    margin-left: 45%;
+.extra {
+    margin-left: 25%;
     position: relative;
-    top: 4vh;
-    transition: transform 0.6 ease;
-    display: inline-block;
-
-  }
-
-  .extra:hover { 
-  transform: scale(1.9) rotate(360deg);
+    top: 3.5vh;
+    transition: 0.6s ease;
 
 }
 
+    .extra:hover {
+        transform: scale(1.5) rotate(360deg);
+    }
 
 
