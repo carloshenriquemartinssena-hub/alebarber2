@@ -200,6 +200,21 @@ color: #FF6C11;
  min-height:100vh;
  margin: 2.2vh -2vh 0vh -2vh; }
 
+.butaovip  {
+       font-family:"Konkhmer Sleokchher", system-ui;
+    color: white;
+    background: linear-gradient( to top, #2272B9, #A4D3FF);
+    padding: 15px 5px 15px 5px;
+    display: block;
+    margin-left: 25%;
+    border: 2px solid blue;
+    border-radius: 16px;
+}
+
+.botaopraia { 
+text-decoration:none;
+font-size:10px; }
+
  .text5 { 
  color:black;
  font-size:35pt;
