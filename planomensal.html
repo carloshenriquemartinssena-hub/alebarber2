@@ -16,8 +16,7 @@
 
 
 <body>
-   <div class="fade-item">
-    <div class="fade-item">
+   
   <header id="cabecalho">
 
     <h1 class="planos"> Planos <br><span class="mensais">Mensais</span></h1>
@@ -30,37 +29,19 @@
          <details>
           <summary class="dois"><span>PACOTE PREMIUM &nbsp &nbsp &nbsp R$55</span></summary>
           <div class="resp">2 CORTES NO MÊS: Ideal para quem corta a cada 15 dias.</div>
-         <button class="botao whats" data-plano="PLANO BÁSICO" data-preco="R$30">Garantir Mensalidade</button>
+         <button class="botao whats" data-plano="PLANO PREMIUM" data-preco="R$55">Garantir Mensalidade</button>
         </details>
          <details>
           <summary class="tres"><span>PACOTE MASTER &nbsp &nbsp &nbsp R$75</span></summary>
           <div class="resp">3 CORTES NO MÊS: Manutenção sempre em dia.</div>
-         <button class="botao whats" data-plano="PLANO BÁSICO" data-preco="R$30">Garantir Mensalidade</button>
+         <button class="botao whats" data-plano="PLANO MASTER" data-preco="R$75">Garantir Mensalidade</button>
         </details>
          <details>
           <summary class="quatro"><span>PACOTE ELITE &nbsp &nbsp &nbsp R$90</span></summary>
           <div class="resp">4 CORTES NO MÊS: Esilo sempre impecável.</div>
-          <button class="botao whats" data-plano="PLANO BÁSICO" data-preco="R$30">Garantir Mensalidade</button>
+          <button class="botao whats" data-plano="PLANO ELITE" data-preco="R$90">Garantir Mensalidade</button>
         </details>
-    </div>
-</div>
-
-    <script>
-  const items = document.querySelectorAll(".fade-item");
-
-  window.addEventListener("scroll", () => {
-    items.forEach(item => {
-      const rect = item.getBoundingClientRect();
-      const startFade = 120; // distância do topo para começar a sumir
-
-      if (rect.top < startFade) {
-        item.style.opacity = (rect.top / startFade);
-      } else {
-        item.style.opacity = 120;
-      }
-    });
-  });
-</script>
+   
 
 
 
@@ -109,5 +90,6 @@
 
       
   </header>
+
 
 </body>
