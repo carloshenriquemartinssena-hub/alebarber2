@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+.pacotes {
+  max-width: 100%;
+
+  background-color: orange;
+  min-height: 50vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.titulo-pacotes {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Container que impede scroll lateral da página */
+.carrossel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* O segredo para NÃO causar scroll lateral */
+}
+
+/* Área que desliza */
+.carrossel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;      /* rolagem horizontal */
+  scroll-snap-type: x mandatory;
+  padding: 20px;
+  margin-top: 0vh;
+  white-space: nowrap;
+}
+
+.carrossel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carrossel::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+/* Remover scrollbar feio */
+/*carrossel::-webkit-scrollbar {*/
+  /*display: none;*/
+
+
+p {
+  font-weight: 300;
+  font-family: "Exo 2", sans-serif;
+}
+
+
+h3{ 
+  font-weight: 800;
+  font-family: "Exo 2", sans-serif;
+ }
+/* Cada card */
+.plano-card {
+  min-width: 250px;
+  background: linear-gradient(to right, #BD8100, #000000);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  color: white;
+  flex-shrink: 0; /* impede de esmagar o card */
+  transition: 0.3s ease;
+  background: linear-gradient(120deg, #ff0080, #ff8c00, #00c3ff);
+  background-size: 400% 400%;
+  animation: animarCor 6s ease infinite;
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+.info-plano {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .6s ease, opacity .4s ease;
+}
+
+.plano-card.ativo .info-plano {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.plano-card.ativo {
+  transform: scale(1.02);
+  background: #606060;
+}
+
+@keyframes animarCor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* Hover premium */
+.plano-card:hover {
+  transform: scale(1.06);
+}
+
+/* Botões laterais */
+.btn-left, .btn-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  background: rgba(0,0,0,0.5);
+  border: none;
+  font-size: 28px;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.btn-left {
+  left: 5px;
+}
+
+.btn-right {
+  right: 5px;
+}
+
+.btn{
+background-color: black;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+
+.btn-left:hover, .btn-right:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+button { background: green; color:white; font-family: "Exo 2", sans-serif;  padding: 5px 5px 5px 5px; border-radius: 8px; }
+
+.faixa  {
+  position: absolute;
+  z-index: 2;
+
+  top: -40px;
+  left: -10px;
+  padding: 8vh 24.5vh;
+  max-margin: 100% ;
+  background-color: black;
+}
+
+.pit { 
+position:absolute; 
+z-index: 999;
+width: 38vh;
+top: -6%;}
+
+.elipse {
+  position:absolute; 
+z-index: 3;
+width: 38vh;
+top: -4%;
+}
+
+.profissional { 
+  left: -35px;
+  position: absolute;
+  z-index: 0;
+width:73%; }
+
+.cliente1 {
+  position: absolute;
+  z-index: 0;
+  width: 110px;
+  right: -2px;
+  top: 10vh;
+}
+
+.cliente2{
+  position: absolute;
+  z-index: 0;
+  width: 110px;
+  right: -2px;
+  top: 30vh;
+}
+
+.plano {
+  color: black;
+  z-index: 999;
+  font-family: 'Exo 2', sans-serif;
+  color: white;
+  top: 42.5vh;
+  left: 45px;
+  position: absolute;
+}
+
+.mensal {
+display: black; 
+color:black;
+font-family:'Exo 2', sans-serif;
+font-size: 20pt;
+margin-left: 20vh;
+ margin-top: -25px}
+
+ .vips { 
+display: flex;
+justify-content: center;
+align-items: center;}

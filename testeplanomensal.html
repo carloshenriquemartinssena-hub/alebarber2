@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="testeplanomensal.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Konkhmer+Sleokchher&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Kolker+Brush&family=Konkhmer+Sleokchher&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Gayathri:wght@100;400;700&family=Kolker+Brush&family=Konkhmer+Sleokchher&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <title> Planos Mensais</title>
+
+  <section class="pacotes">
+    <div class="faixa">
+   
+    <button class="btn" onclick="voltarServicos()">
+  ← Voltar 
+</button>
+</div>
+<img class="pit" src="pitpng1.png">
+<img class="elipse" src="elipse.png">
+<img class="profissional" src="profissional.png">
+<img class="cliente1" src="clienteplano1.png">
+<img class="cliente2" src="clienteplano2.png">
+
+
+
+
+</section>
+<sectio>
+
+    <h1 class="plano">PLANO<h1>
+        <h1 class="mensal">MENSAL</h1>
+
+        <p class="vips"><i>"Clientes VIPs não gostam de<br>esperar em filas".</i></p>
+  <h2 class="titulo-pacotes">Escolha seu plano mensal</h2>
+
+  <div class="carrossel-container">
+
+
+
+    <!-- ÁREA DESLIZANTE -->
+    <div class="carrossel" id="carrossel">
+
+      <div class="plano-card" data-plano="1">
+        <h3>PACOTE BÁSICO &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp R$30 </h3>
+        <p>Economize e fique sempre no estilo.</p>
+
+        <div class="info-plano">
+            <p>CORTE AVULSO: Perfeito para quem<br>corta de vez enquando.</p>
+            <button class="botao whats" data-plano="PACOTE BÁSICO" data-preco="R$30">ASSINAR AGORA</button>
+    <!-- <p>Acesso total aos serviços premium.</p> -->
+    <!-- <p>Horário preferencial e suporte exclusivo.</p> -->
+    <!-- <p>Benefícios mensais especiais.</p> -->
+  </div>
+      </div>
+
+      <div class="plano-card" data-plano="2">
+        <h3>PACOTE PREMIUM &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp R$55 </h3>
+        <p>Benefícios intermediários</p>
+
+        <div class="info-plano">
+            <p>2 CORTES NO MÊS: Ideal para quem<br>corta a cada 15 dias.</p>
+            <button class="botao whats" data-plano="PACOTE PREMIUM" data-preco="R$55">ASSINAR AGORA</button>
+  
+  </div>
+      </div>
+
+      <div class="plano-card" data-plano="3">
+        <h3>PACOTE MASTER &nbsp &nbsp &nbsp &nbsp &nbsp  R$75</h3>
+        <p>Acesso completo</p>
+        <div class="info-plano">
+    <p>3 CORTES NO MÊS: <br>Manutenção sempre em dia.</p>
+    <button id="botao whats" data-plano="PACOTE MASTER" data-preco="R$75">ASSINAR AGORA</button>
+  </div>
+      </div>
+
+      <div class="plano-card" data-plano="4">
+        <h3>PACOTE ELITE &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp R$90</h3>
+        <p>Melhor custo-benefício</p>
+        <div class="info-plano">
+    <p>4 CORTES NO MÊS: <br>Estão SEMPRE impecáveis!</p>
+    <button class="botao whats" data-plano="PACOTE ELITE" data-preco="R$90">ASSINAR AGORA</button>
+      </div>
+
+
+
+</section>
+
+<script>
+  const cards = document.querySelectorAll(".plano-card");
+
+  cards.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+      // se já está aberto → fecha
+      if (card.classList.contains("ativo")) {
+        card.classList.remove("ativo");
+        return;
+      }
+
+      // fecha todos
+      cards.forEach(c => c.classList.remove("ativo"));
+
+      // abre o clicado
+      card.classList.add("ativo");
+    });
+
+  });
+
+  // Fecha tudo ao rolar a página
+  window.addEventListener("scroll", () => {
+    cards.forEach(c => c.classList.remove(""));
+  });
+</script>
+
+<script>
+    function voltarServicos(){ 
+        window.location.href = "index.html"
+
+    }
+</script>
+
+<script>
+  const numero = "5511960248301"; // coloque seu número
+
+  document.querySelectorAll(".whats").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const plano = btn.getAttribute("data-plano");
+      const preco = btn.getAttribute("data-preco");
+
+      const mensagem = `
+🔥 Novo plano mensal escolhido!
+✂️ *${plano}* - ${preco}
+
+💈 Quero garantir minha mensalidade!
+
+        MEU NOME É: 
+        ENDEREÇO: 
+        CPF: 
+        DATA HOJE:
+      `.trim();
+
+      const url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
+
+      window.open(url, "_blank");
+    });
+  });
+</script>
+
+
+
