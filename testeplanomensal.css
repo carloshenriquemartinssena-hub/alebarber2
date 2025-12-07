@@ -872,3 +872,297 @@ align-items: center;}
   font-size:15px; }
 
 }
+
+/*TABLETS*/
+
+@media ( min-width: 760px ) and ( max-width:768px ){
+
+.pacotes {
+  z-index: 0;
+ 
+  max-width: 100%;
+  min-height: 65vh
+ 
+}
+
+.titulo-pacotes {
+  z-index: 0;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Container que impede scroll lateral da página */
+.carrossel-container {
+  z-index: 999;
+  top: 7vh;
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* O segredo para NÃO causar scroll lateral */
+}
+
+/* Área que desliza */
+.carrossel {
+  z-index: 999;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;      /* rolagem horizontal */
+  scroll-snap-type: x mandatory;
+  padding: 2px;
+  margin-top: 0vh;
+  white-space: nowrap;
+}
+
+.carrossel::-webkit-scrollbar {
+  z-index: 999;
+  /*height: 8px;*/
+}
+
+.carrossel::-webkit-scrollbar-thumb {
+  z-index: 999;
+  background: #444;
+  /*border-radius: 10px;*/
+}
+
+/* Remover scrollbar feio */
+/*carrossel::-webkit-scrollbar {*/
+  /*display: none;*/
+
+
+p {
+  font-size: 10px;
+  
+  font-weight: 300;
+  font-family: "Exo 2", sans-serif;
+}
+
+
+  h3{ 
+    overflow-x: hidden;
+    font-size: 15px;
+
+    font-weight: 800;
+    font-family: "Exo 2", sans-serif;
+ }
+
+ price {
+ margin-left: 10px; 
+  font-size: 20px;
+ font-family: "Exo 2",  sans-serif;}
+
+ .PP { 
+  z-index: 999;
+ margin-left: -5px; }
+/* Cada card */
+.plano-card {
+  max-width: 120px;
+  /*background: linear-gradient(to right, #BD8100, #000000);*/
+  padding: 10px ;
+  border: 2px solid white;
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  color: white;
+  flex-shrink: 0; /* impede de esmagar o card */
+  
+}
+
+.premium  {
+  top: 3vh;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+/*.info-plano {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .6s ease, opacity .4s ease;
+}*/
+
+.plano-card.ativo .info-plano {
+  z-index: 999;
+  max-height: 300px;
+  opacity: 1;
+}
+
+.plano-card.ativo {
+  z-index: 999;
+  transform: scale(1.02);
+  background: black;
+}
+
+/*@keyframes animarCor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+*/
+
+/* Hover premium */
+.plano-card:hover {
+  transform: scale(1.06);
+}
+
+/* Botões laterais */
+.btn-left, .btn-right {
+  top: 50%;
+  transform: translateY(-50%);
+  
+  background: rgba(0,0,0,0.5);
+  border: none;
+  font-size: 28px;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.btn-left {
+  left: 5px;
+}
+
+.btn-right {
+  right: 5px;
+}
+
+.btn-voltar{
+background-color: black;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+
+.btn-left:hover, .btn-right:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+button { background: #F99900; color:white; font-family: "Exo 2", sans-serif;  padding: 5px 5px 5px 5px; border-radius: 8px; }
+
+/*.faixa  {*/
+/*  position: absolute;
+  z-index: 2;
+
+  top: -40px;
+  left: -10px;
+  padding: 8vh 24.5vh;
+  max-margin: 100% ;
+  background-color: black;*/
+
+
+.pit { 
+  z-index: 0;
+  max-width: 105% ;
+  pointer-events: none;
+  top: -50vh;
+position:absolute;
+margin-left:-37px ;
+
+
+ }
+
+.elipse {
+ 
+z-index: 3;
+width: 10px;
+top: -4%;
+}
+
+.profissional { 
+  position: relative;
+width: 30vh;
+top: 10vh;
+margin-left: -2vh;
+z-index: 0;}
+
+.cliente1 {
+  
+  z-index: 0;
+  width: 110px;
+  right: -2px;
+  top: 10vh;
+}
+
+.cliente2{
+  
+  z-index: 0;
+  width: 110px;
+  right: -2px;
+  top: 30vh;
+}
+
+.plano {
+  margin-right: 51vh;
+  z-index: 0;
+overflow-x: hidden;
+  color: black;
+  position: relative;
+  left: 25vh;
+  top: 5vh;
+
+   font-family: 'Exo 2', sans-serif;
+  color: white;
+}
+
+
+ .vips { 
+display: flex;
+justify-content: center;
+align-items: center;}
+
+.frame2  {
+
+  z-index: 999;
+  padding-top: 30vh;
+  min-height: 80vh;
+  max-width: 100%;}
+
+  .h1frame2 { 
+    margin-top: 20vh;
+    padding: px 10px 2px 15px;
+    border-radius:5px;
+    margin-right: 8vh;
+    border: 1px solid black;
+    position: relative;
+   left: 25px;
+    font-family: "Exo 2", sans-serif;
+  font-size:13px }
+
+  .pframe2 { 
+  font-size:15px; }
+
+  .boxfrase { 
+    font-family: "Exo 2", sans-serif;
+    margin-right: 32vh;
+    font-size: 12px;
+    padding: 45px 10px;
+  background: linear-gradient(to right, #060606, #47669C);
+  color:white;
+  display:flex; 
+  flex-direction: column;}
+
+  .boxfrase2 {
+  display: black; 
+    margin-top: 4vh;
+  color: orange; }
+
+  .pitfoto{ 
+  position:absolute;
+  max-width:20%;
+  left:80.5vh;
+  margin-top:-43.5vh }
+
+  .ultimo { 
+  color:black;
+  bottom:20px;
+  font-size:15px; }
+
