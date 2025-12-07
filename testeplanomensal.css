@@ -8,7 +8,7 @@ overflow-x: hidden;}
 min-height:0;
 max-width:0 auto; }
 
-@media ( min-width: 320px ) and ( max-width:325px ){
+@media ( max-width:325px ){
 
 .pacotes {
   z-index: 0;
@@ -296,7 +296,7 @@ align-items: center;}
 }
 
 
-@media ( min-width: 370px ) and ( max-width:375px ){
+@media ( min-width: 326px ) and ( max-width:375px ){
 
 .pacotes {
   z-index: 0;
@@ -875,7 +875,7 @@ align-items: center;}
 
 /*TABLETS*/
 
-@media ( min-width: 760px ) and ( max-width:768px ){
+@media ( min-width: 426px ) and ( max-width:768px ){
 
 .pacotes {
   z-index: 0;
