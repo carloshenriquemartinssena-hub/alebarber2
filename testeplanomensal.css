@@ -316,7 +316,7 @@ align-items: center;}
 
 /* Container que impede scroll lateral da página */
 .carrossel-container {
-  z-index: 999;
+  z-index: 998;
   top: 2vh;
   position: relative;
   width: 100%;
@@ -325,7 +325,7 @@ align-items: center;}
 
 /* Área que desliza */
 .carrossel {
-  z-index: 999;
+  z-index: 998;
   display: flex;
   gap: 20px;
   overflow-x: auto;      /* rolagem horizontal */
@@ -336,12 +336,12 @@ align-items: center;}
 }
 
 .carrossel::-webkit-scrollbar {
-  z-index: 999;
+  z-index: 998;
   /*height: 8px;*/
 }
 
 .carrossel::-webkit-scrollbar-thumb {
-  z-index: 999;
+  z-index: 998;
   background: #444;
   /*border-radius: 10px;*/
 }
@@ -373,7 +373,7 @@ p {
  font-family: "Exo 2",  sans-serif;}
 
  .PP { 
-  z-index: 999;
+  z-index: 998;
  margin-left: -5px; }
 /* Cada card */
 .plano-card {
@@ -402,13 +402,13 @@ p {
 }*/
 
 .plano-card.ativo .info-plano {
-  z-index: 999;
+  z-index: 998;
   max-height: 300px;
   opacity: 1;
 }
 
 .plano-card.ativo {
-  z-index: 999;
+  z-index: 998;
   transform: scale(1.02);
   background: black;
 }
@@ -875,7 +875,7 @@ align-items: center;}
 
 /*TABLETS*/
 
-@media ( min-width: 426px ) and ( max-width:768px ){
+@media ( min-width: 426   px ) and ( max-width:768px ){
 
 .pacotes {
   z-index: 0;

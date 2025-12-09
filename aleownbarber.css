@@ -200,20 +200,28 @@ color: #FF6C11;
  min-height:100vh;
  margin: 2.2vh -2vh 0vh -2vh; }
 
-.butaovip  {
+.butaovip  {  
+font-weight: 400;  
        font-family:"Konkhmer Sleokchher", system-ui;
     color: white;
     background: linear-gradient( to top, #2272B9, #A4D3FF);
-    padding: 15px 5px 15px 5px;
-    display: block;
-    margin-left: 25%;
-    border: 2px solid blue;
-    border-radius: 16px;
+    display: flex; border: 1px solid black; border-radius: 8px;
+    flex-direction: column;
+   position: relative;
+    left: 25%;
+    margin-bottom: 2px;
+    padding: 5px 32px;
+        
 }
 
-.botaopraia { 
+.botaopraia {
+
 text-decoration:none;
-font-size:10px; }
+font-size:8px; }
+
+.botaopraia2 { 
+text-decoration:none;
+font-size:8px; }
 
  .text5 { 
  color:black;

@@ -10,6 +10,8 @@
   <title> Alebarber </title>
   </head>
 
+
+
   <body>
     <header class="hero">
   <!-- MENU HAMBÚRGUER RESPONSIVO COMPLETO -->
@@ -199,7 +201,9 @@
 
   </table>
 
-  <button class="butaovip"> <a class="botaopraia" href="testeplanomensal.html">CONHEÇA A MENSALIDADE VIP</a></button>
+  <button class="butaovip"> <a class="botaopraia" href="testeplanomensal.html">CONHEÇA A MENSALIDADE VIP<br>CABELOS</a></button>
+  <button class="butaovip"> <a class="botaopraia2" href="testeplanomensal.html">CONHEÇA A MENSALIDADE VIP<br>CABELOS+BARBA</a></button>
+
 
   <img class="alepraia" src="alepraia.png">
     </section>
@@ -337,5 +341,35 @@
     <p>© 2025 Alewon Barber — Todos os direitos reservados.</p>
     <p>Desenvolvido por <span class="autor">Max Virelli</span></p>
   </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.min.js"></script>
+
+<script>
+  const supabaseUrl = 'https://inzmdbolriakuqvvsvci.supabase.co';
+  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imluem1kYm9scmlha3VxdnZzdmNpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ5NDU2NDQsImV4cCI6MjA4MDUyMTY0NH0.y1CUmhrQubRZZPpFnpPITINJnWfuABK1cqGjCUE-Zlg';
+  const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+</script>
+
+<script>
+async function teste() {
+  const { data, error } = await supabase
+    .from("agendamentos")
+    .insert([
+      {
+        nome: "AleB123",
+        data: "2025-05-21",
+        hora: "14:00",
+        servico: "Corte masculino"
+      }
+    ])
+
+  console.log("data:", data);
+  console.log("error:", error);
+}
+
+teste();
+</script>
+
 
   </body>

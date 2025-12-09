@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="testeplanomensal.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Konkhmer+Sleokchher&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Kolker+Brush&family=Konkhmer+Sleokchher&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Gayathri:wght@100;400;700&family=Kolker+Brush&family=Konkhmer+Sleokchher&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <title> Planos Mensais</title>
+
+  <section class="pacotes">
+    <div class="faixa">
+   
+    <button class="btn-voltar" onclick="voltarServicos()">
+  ← Voltar 
+</button>
+
+</div>
+
+<style>
+  
+  .pit {top: 0%; display: block; width: 105%; height: 60%; overflow-x: hidden;}
+</style>
+
+<img class="pit" src="homembarba.jpg" >
+
+
+ <h1 class="plano">ESCOLHA UM PLANO IDEAL<h1>
+    
+
+  <div class="carrossel-container">
+
+
+
+    <!-- ÁREA DESLIZANTE -->
+    <div class="carrossel" id="carrossel">
+
+      <div class="plano-card" data-plano="1">
+        <h3>PACOTE BÁSICO  </h3>
+        <p>Economize e fique sempre<br> no estilo.</p>
+
+        <div class="info-plano">
+            <p>1 Corte+Barba no mês.<br>
+              Perfeito pra quem gosta de<br>mantero visual em dia de<br> vez enquando.<br><span style="color:yellow;">Ideal pra aquele<br>retoque e alinhamento <br>básico</span></p>
+
+          <price> R$ 55,00</price>
+
+          <br>
+            <button class="botao whats" data-plano="PACOTE BÁSICO" data-preco="R$55,00">ASSINAR AGORA</button>
+    <!-- <p>Acesso total aos serviços premium.</p> -->
+    <!-- <p>Horário preferencial e suporte exclusivo.</p> -->
+    <!-- <p>Benefícios mensais especiais.</p> -->
+  </div>
+      </div>
+
+      <div class="plano-card" data-plano="2">
+        <h3 class="PP">PACOTE PREMIUM </h3>
+        <p>Benefícios intermediários</p>
+
+        <div class="info-plano">
+            <p class="PP">2 Cortes+Barbas no mês<br>
+              Pra quem gosta de estar <br>sempre apresentável, <br>cortando a cada 15 dias.<br><span style="color: yellow;"> Economize R$10<br> comparado ao avulso.</span></p>
+
+
+            <div class="premium">
+
+            <price> R$ 100,00</price>
+
+          </div>
+           
+            <button class="botao whats" data-plano="PACOTE PREMIUM" data-preco="R$100,00">ASSINAR AGORA</button>
+  
+  </div>
+      </div>
+
+      <div class="plano-card" data-plano="3">
+        <h3>PACOTE MASTER</h3>
+        <p>Acesso completo</p>
+        <div class="info-plano">
+  <p>3 Cortes+Barbas no mês<br> Estilo e barba<br>sempre impecáveis<br>sem deixar o visual<br>sair da régua.<br><span style="color:yellow;">Economize R$30 no mês</span></p>
+
+    <div class="premium">
+
+            <price> R$ 135,00</price>
+
+          </div>
+    <button class="botao whats" data-plano="PACOTE MASTER" data-preco="R$135
+    00">ASSINAR AGORA</button>
+  </div>
+      </div>
+
+      <div class="plano-card" data-plano="4">
+        <h3>PACOTE ELITE</h3>
+        <p>Melhor custo-benefício</p>
+        <div class="info-plano">
+    <p>4 Cortes+Barbas no mês<br>
+      Pra quem é raiz<br>gosta de estar 100%<br>toda semana<br><span style="color:yellow;">Economize R$30 no mês</span></p>
+
+    <div class="premium">
+
+            <price> R$ 160,00</price>
+
+          </div>
+    <button class="botao whats" data-plano="PACOTE ELITE" data-preco="R$160,00">ASSINAR AGORA</button>
+      </div>
+
+     
+        
+      </section>
+
+       <section id="frame2" class="frame2"> 
+        <h1 class="h1frame2"> Por que escolher um plano mensal e se<br>
+tornar VIP é a melhor decisão?</h1>
+<p class="pframe2">Ser cliente VIP não é sobre gastar mais.<br> É sobre receber mais, ser tratado melhor e nunca mais 
+se preocupar com horário, fila ou improviso.</p>
+
+<div class="boxfrase"> Quando você escolhe<br>um dos nossos planos<br>mensais, você garante<br>algo que<br>vale mais que qualquer promoção:<br> <span class="boxfrase2">um cuidado contínuo,<br>personalizado e feito<br>por quem realmente entende o seu estilo.</span></div>
+
+<p class="ultimo">Ser vip é ter a liberdade de manter a aparência sempre em dia, sem depender de sorte, sem filas, sem pegar qualquer horário que sobrou.</p>
+
+  <img class="pitfoto" src="pitfoto.png">
+
+
+
+
+</section>
+
+<script>
+  const cards = document.querySelectorAll(".plano-card");
+
+  cards.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+      // se já está aberto → fecha
+      if (card.classList.contains("ativo")) {
+        card.classList.remove("ativo");
+        return;
+      }
+
+      // fecha todos
+      cards.forEach(c => c.classList.remove("ativo"));
+
+      // abre o clicado
+      card.classList.add("ativo");
+    });
+
+  });
+
+  // Fecha tudo ao rolar a página
+  window.addEventListener("scroll", () => {
+    cards.forEach(c => c.classList.remove(""));
+  });
+</script>
+
+<script>
+function voltarServicos() {
+  window.location.href = "index.html";
+}
+</script>
+
+<script>
+  const numero = "5511960248301"; // coloque seu número
+
+  document.querySelectorAll(".whats").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const plano = btn.getAttribute("data-plano");
+      const preco = btn.getAttribute("data-preco");
+
+      const mensagem = `
+🔥 Novo plano mensal escolhido!
+✂️ *${plano}* - ${preco}
+
+💈 Quero garantir minha mensalidade!
+
+        MEU NOME É: 
+        ENDEREÇO: 
+        CPF: 
+        DATA HOJE:
+      `.trim();
+
+      const url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
+
+      window.open(url, "_blank");
+    });
+  });
+</script>
+
+<iframe src="https://widget.tagembed.com/310212?website=1" style="width:100%;height:100%;overflow:auto;border:none;"></iframe>
+
+
+
+
