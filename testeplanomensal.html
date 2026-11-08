@@ -1,187 +1,199 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="testeplanomensal.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Konkhmer+Sleokchher&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Kolker+Brush&family=Konkhmer+Sleokchher&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Gayathri:wght@100;400;700&family=Kolker+Brush&family=Konkhmer+Sleokchher&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-
-
-    <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-  <title> Planos Mensais</title>
-
-  <section class="pacotes">
-    <div class="faixa">
-   
-    <button class="btn-voltar" onclick="voltarServicos()">
-  ← Voltar 
-</button>
-
-</div>
-<img class="pit" src="frame19.png" style="overflow-x: hidden;">
-
-
- <h1 class="plano">ESCOLHA UM PLANO IDEAL<h1>
-    
-
-  <div class="carrossel-container">
-
-
-
-    <!-- ÁREA DESLIZANTE -->
-    <div class="carrossel" id="carrossel">
-
-      <div class="plano-card" data-plano="1">
-        <h3>PACOTE BÁSICO  </h3>
-        <p>Economize e fique sempre<br> no estilo.</p>
-
-        <div class="info-plano">
-            <p>CORTE AVULSO: Perfeito <br>para quem<br>corta de vez enquando.</p>
-
-          <price> R$ 30,00</price>
-
-          <br>
-            <button class="botao whats" data-plano="PACOTE BÁSICO" data-preco="R$30">ASSINAR AGORA</button>
-    <!-- <p>Acesso total aos serviços premium.</p> -->
-    <!-- <p>Horário preferencial e suporte exclusivo.</p> -->
-    <!-- <p>Benefícios mensais especiais.</p> -->
-  </div>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="Escolha seu plano mensal de cortes Alewon Barber. Um valor definido, mais praticidade e cortes a domicílio sob consulta de região.">
+  <title>Planos Mensais de Corte | Alewon Barber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="testeplanomensal.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="wrap topbar-inner" aria-label="Navegação dos planos">
+      <a class="brand" href="index.html" aria-label="Alewon Barber - início">ALEWON<span>BARBER</span></a>
+      <div class="top-links">
+        <a href="testeplanomensal.html" aria-current="page">Cabelo</a>
+        <a href="planomensal-cabelo-barba.html">Cabelo + barba</a>
       </div>
+      <a class="action action-primary" href="#adesao">Quero ser VIP <span aria-hidden="true">→</span></a>
+    </nav>
+  </header>
 
-      <div class="plano-card" data-plano="2">
-        <h3 class="PP">PACOTE PREMIUM </h3>
-        <p>Benefícios intermediários</p>
+  <main>
+    <section class="masthead" style="--hero-photo: url('homembarba.jpg')">
+      <div class="wrap">
+        <div class="masthead-content">
+          <p class="overline">ALEWON BARBER · PLANO MENSAL DE CABELO</p>
+          <h1>Seu próximo corte já está <span>no plano.</span></h1>
+          <p class="masthead-copy">Escolha quantos cortes combinam com sua rotina. Você conhece o valor do mês, mantém o visual em dia e organiza seus atendimentos pelo WhatsApp — sem preencher o cadastro do site toda vez.</p>
+          <a class="action action-primary" href="#planos">Encontrar meu plano <span aria-hidden="true">↓</span></a>
+          <ul class="masthead-points">
+            <li>1 a 4 cortes por mês</li>
+            <li>Atendimento a domicílio sob consulta</li>
+            <li>Valor mensal informado antes da adesão</li>
+          </ul>
+        </div>
+      </div>
+      <figure class="masthead-figure">
+        <img src="clienteplano1.png" alt="Exemplo de corte masculino realizado pela Alewon Barber" fetchpriority="high">
+      </figure>
+    </section>
 
-        <div class="info-plano">
-            <p class="PP">2 CORTES NO MÊS: Ideal para <br>quem corta a cada 15 dias.</p>
+    <section class="section plan-section" id="planos">
+      <div class="wrap">
+        <header class="section-heading fade-in">
+          <p class="overline">FREQUÊNCIA DO SEU JEITO</p>
+          <h2 class="section-title">Escolha seu plano de <span>corte</span></h2>
+          <p class="section-intro">Mensalidade com uma quantidade definida de cortes. Compare os valores e escolha a frequência que faz sentido para você.</p>
+        </header>
+        <div class="plan-grid">
+          <article class="plan-card fade-in" data-plan-card="cabelo-1">
+            <span class="plan-badge">Essencial</span>
+            <h3>Básico</h3>
+            <p class="plan-subtitle">Para manter a manutenção em dia.</p>
+            <p class="plan-quota">1 corte <span>por mês</span></p>
+            <div class="plan-price"><strong>R$ 30</strong><span>/ mês</span></div>
+            <p class="plan-unit">R$ 30 por corte incluído</p>
+            <p class="plan-savings">Uma visita mensal, com o valor já definido.</p>
+            <ul class="plan-includes"><li>1 corte no mês</li><li>Atendimento a domicílio sob consulta</li><li>Agendamento direto pelo WhatsApp</li></ul>
+            <a class="action action-quiet" href="#adesao" data-select-plan="cabelo-1">Quero este plano <span aria-hidden="true">→</span></a>
+          </article>
 
+          <article class="plan-card fade-in" data-plan-card="cabelo-2">
+            <span class="plan-badge">Mais praticidade</span>
+            <h3>Premium</h3>
+            <p class="plan-subtitle">Uma frequência confortável, sem deixar crescer demais.</p>
+            <p class="plan-quota">2 cortes <span>por mês</span></p>
+            <div class="plan-price"><strong>R$ 55</strong><span>/ mês</span></div>
+            <p class="plan-unit">R$ 27,50 por corte incluído</p>
+            <p class="plan-savings">Economize <strong>R$ 5 por mês</strong> em relação aos cortes avulsos.</p>
+            <ul class="plan-includes"><li>2 cortes no mês</li><li>Atendimento a domicílio sob consulta</li><li>Agendamento direto pelo WhatsApp</li></ul>
+            <a class="action action-quiet" href="#adesao" data-select-plan="cabelo-2">Quero este plano <span aria-hidden="true">→</span></a>
+          </article>
 
-            <div class="premium">
+          <article class="plan-card is-featured fade-in" data-plan-card="cabelo-3">
+            <span class="plan-badge">Equilíbrio ideal</span>
+            <h3>Master</h3>
+            <p class="plan-subtitle">Para quem gosta de estar sempre alinhado.</p>
+            <p class="plan-quota">3 cortes <span>por mês</span></p>
+            <div class="plan-price"><strong>R$ 75</strong><span>/ mês</span></div>
+            <p class="plan-unit">R$ 25 por corte incluído</p>
+            <p class="plan-savings">Economize <strong>R$ 15 por mês</strong> em relação aos cortes avulsos.</p>
+            <ul class="plan-includes"><li>3 cortes no mês</li><li>Atendimento a domicílio sob consulta</li><li>Agendamento direto pelo WhatsApp</li></ul>
+            <a class="action action-primary" href="#adesao" data-select-plan="cabelo-3">Quero este plano <span aria-hidden="true">→</span></a>
+          </article>
 
-            <price> R$ 55,00</price>
+          <article class="plan-card fade-in" data-plan-card="cabelo-4">
+            <span class="plan-badge">Mais economia</span>
+            <h3>Elite</h3>
+            <p class="plan-subtitle">Sua rotina de cuidados já organizada para o mês.</p>
+            <p class="plan-quota">4 cortes <span>por mês</span></p>
+            <div class="plan-price"><strong>R$ 90</strong><span>/ mês</span></div>
+            <p class="plan-unit">R$ 22,50 por corte incluído</p>
+            <p class="plan-savings">Economize <strong>R$ 30 por mês</strong> em relação aos cortes avulsos.</p>
+            <ul class="plan-includes"><li>4 cortes no mês</li><li>Atendimento a domicílio sob consulta</li><li>Agendamento direto pelo WhatsApp</li></ul>
+            <a class="action action-quiet" href="#adesao" data-select-plan="cabelo-4">Quero este plano <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section how-section">
+      <div class="wrap how-layout">
+        <div class="how-photo fade-in">
+          <img class="how-photo-main" src="homembarba.jpg" alt="Atendimento de barbearia e cuidado profissional" loading="lazy">
+          <img class="how-photo-detail" src="clienteplano2.png" alt="Exemplo de corte com acabamento detalhado" loading="lazy">
+        </div>
+        <div class="how-copy fade-in">
+          <p class="overline">MENOS RECOMEÇO. MAIS ROTINA.</p>
+          <h2>Você cuida do visual. A gente simplifica o resto.</h2>
+          <p>Com um plano mensal, você escolhe sua frequência e sabe quanto o pacote custa. Depois da adesão, fale com o barbeiro pelo WhatsApp para combinar os atendimentos do mês; não precisa refazer sua escolha de plano em cada visita.</p>
+          <ol class="steps">
+            <li><span>01</span><div><strong>Escolha sua frequência</strong><p>Compare a quantidade de cortes e a mensalidade de cada opção.</p></div></li>
+            <li><span>02</span><div><strong>Solicite a adesão pelo WhatsApp</strong><p>Envie seu nome, bairro e plano de interesse. Confirme área atendida, pagamento e renovação.</p></div></li>
+            <li><span>03</span><div><strong>Combine seus atendimentos</strong><p>Informe suas datas preferidas em uma conversa. Horários dependem de confirmação e disponibilidade.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section signup-section" id="adesao">
+      <div class="wrap signup-layout">
+        <div class="signup-copy fade-in">
+          <p class="overline">UM VISUAL BEM CUIDADO, O MÊS INTEIRO</p>
+          <h2>Vamos encontrar seu <span>ritmo?</span></h2>
+          <p>Escolha seu plano e envie seus dados básicos. O WhatsApp abre com uma mensagem pronta para você revisar e enviar ao barbeiro.</p>
+          <ul class="signup-list">
+            <li>Sem CPF ou cadastro longo para pedir informações</li>
+            <li>Você confirma as condições antes de aderir</li>
+            <li>Consulte o bairro e os horários antes do primeiro pagamento</li>
+          </ul>
+          <div class="signup-photos" aria-label="Trabalhos da Alewon Barber">
+            <img src="clienteplano1.png" alt="Corte com degradê feito pela Alewon Barber" loading="lazy">
+            <img src="clienteplano2.png" alt="Acabamento de corte e barba" loading="lazy">
+            <p>Trabalho caprichado, no seu estilo.</p>
           </div>
-           
-            <button class="botao whats" data-plano="PACOTE PREMIUM" data-preco="R$55">ASSINAR AGORA</button>
-  
-  </div>
-      </div>
+        </div>
 
-      <div class="plano-card" data-plano="3">
-        <h3>PACOTE MASTER</h3>
-        <p>Acesso completo</p>
-        <div class="info-plano">
-    <p>3 CORTES NO MÊS: <br>Manutenção sempre em dia.</p>
-
-    <div class="premium">
-
-            <price> R$ 75,00</price>
-
+        <form class="join-form fade-in" data-plan-form>
+          <h3>Solicite sua adesão</h3>
+          <p class="form-intro">Preencha seus dados. Você confirma a contratação diretamente com o barbeiro.</p>
+          <div class="form-fields">
+            <label class="form-field">Seu nome<input type="text" name="nome" autocomplete="name" placeholder="Nome completo" required></label>
+            <label class="form-field">Seu WhatsApp<input type="tel" name="whatsapp" autocomplete="tel" placeholder="(11) 99999-9999" required></label>
+            <label class="form-field">Bairro onde deseja receber o atendimento<input type="text" name="bairro" autocomplete="address-level3" placeholder="Seu bairro e cidade" required></label>
+            <label class="form-field">Plano mensal
+              <select name="plano" data-plan-select required>
+                <option value="">Selecione sua frequência</option>
+                <option value="cabelo-1" data-label="Básico — 1 corte" data-price="30">Básico — 1 corte/mês · R$ 30</option>
+                <option value="cabelo-2" data-label="Premium — 2 cortes" data-price="55">Premium — 2 cortes/mês · R$ 55</option>
+                <option value="cabelo-3" data-label="Master — 3 cortes" data-price="75">Master — 3 cortes/mês · R$ 75</option>
+                <option value="cabelo-4" data-label="Elite — 4 cortes" data-price="90">Elite — 4 cortes/mês · R$ 90</option>
+              </select>
+            </label>
           </div>
-    <button class="botao whats" data-plano="PACOTE MASTER" data-preco="R$75">ASSINAR AGORA</button>
-  </div>
+          <div class="join-summary"><span>Mensalidade selecionada</span><strong>R$ <span data-plan-total>—</span> <small>/ mês</small></strong></div>
+          <button class="action action-primary" type="submit">Continuar pelo WhatsApp <span aria-hidden="true">→</span></button>
+          <p class="fine-print">Este formulário envia somente uma solicitação de adesão pelo WhatsApp. O site não realiza cobrança nem ativa renovação automática. Antes de aderir, confirme com o barbeiro a mensalidade, renovação, forma de pagamento, regras de uso e cancelamento. Atendimento e horários sujeitos à confirmação.</p>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        </form>
       </div>
+    </section>
 
-      <div class="plano-card" data-plano="4">
-        <h3>PACOTE ELITE</h3>
-        <p>Melhor custo-benefício</p>
-        <div class="info-plano">
-    <p>4 CORTES NO MÊS: <br>Estão SEMPRE impecáveis!</p>
-
-    <div class="premium">
-
-            <price> R$ 90,00</price>
-
-          </div>
-    <button class="botao whats" data-plano="PACOTE ELITE" data-preco="R$90">ASSINAR AGORA</button>
+    <section class="section faq-section">
+      <div class="wrap">
+        <header class="section-heading fade-in">
+          <p class="overline">SEM DÚVIDAS NA HORA DE ESCOLHER</p>
+          <h2 class="section-title">Como funciona o <span>plano</span></h2>
+        </header>
+        <div class="faq-grid">
+          <details><summary>Preciso preencher tudo de novo a cada corte?</summary><p>Não. A solicitação é para aderir ao plano mensal. Depois de confirmar o plano com o barbeiro, combine seus atendimentos pelo WhatsApp sem refazer a adesão em cada visita.</p></details>
+          <details><summary>Posso solicitar meus horários do mês de uma vez?</summary><p>Sim. Na conversa, informe as datas e horários de sua preferência para organizar as visitas do período. Cada horário depende de disponibilidade e confirmação do barbeiro.</p></details>
+          <details><summary>A assinatura e a cobrança são automáticas?</summary><p>Não pelo site: ele não processa pagamentos nem inicia cobranças recorrentes. A adesão é solicitada pelo WhatsApp; confirme diretamente como a mensalidade, a renovação e o cancelamento funcionam antes de contratar.</p></details>
+          <details><summary>O atendimento está disponível no meu bairro?</summary><p>Informe seu bairro no formulário e confirme a área atendida antes de aderir. O atendimento é a domicílio e a disponibilidade é confirmada pelo barbeiro.</p></details>
+        </div>
       </div>
+    </section>
 
-     
-        
-      </section>
+    <section class="closing">
+      <div class="wrap closing-inner">
+        <div><h2>Seu próximo corte pode fazer parte da sua <span>rotina.</span></h2><p>Escolha a frequência que combina com você.</p></div>
+        <a class="action action-primary" href="#planos">Ver os planos <span aria-hidden="true">↑</span></a>
+      </div>
+    </section>
+  </main>
 
-       <section id="frame2" class="frame2"> 
-        <h1 class="h1frame2"> Por que escolher um plano mensal e se<br>
-tornar VIP é a melhor decisão?</h1>
-<p class="pframe2">Ser cliente VIP não é sobre gastar mais.<br> É sobre receber mais, ser tratado melhor e nunca mais 
-se preocupar com horário, fila ou improviso.</p>
-
-<div class="boxfrase"> Quando você escolhe<br>um dos nossos planos<br>mensais, você garante<br>algo que<br>vale mais que qualquer promoção:<br> <span class="boxfrase2">um cuidado contínuo,<br>personalizado e feito<br>por quem realmente entende o seu estilo.</span></div>
-
-<p class="ultimo">Ser vip é ter a liberdade de manter a aparência sempre em dia, sem depender de sorte, sem filas, sem pegar qualquer horário que sobrou.</p>
-
-  <img class="pitfoto" src="pitfoto.png">
-
-
-
-
-</section>
-
-<script>
-  const cards = document.querySelectorAll(".plano-card");
-
-  cards.forEach(card => {
-
-    card.addEventListener("click", () => {
-
-      // se já está aberto → fecha
-      if (card.classList.contains("ativo")) {
-        card.classList.remove("ativo");
-        return;
-      }
-
-      // fecha todos
-      cards.forEach(c => c.classList.remove("ativo"));
-
-      // abre o clicado
-      card.classList.add("ativo");
-    });
-
-  });
-
-  // Fecha tudo ao rolar a página
-  window.addEventListener("scroll", () => {
-    cards.forEach(c => c.classList.remove(""));
-  });
-</script>
-
-<script>
-function voltarServicos() {
-  window.location.href = "index.html";
-}
-</script>
-
-<script>
-  const numero = "5511960248301"; // coloque seu número
-
-  document.querySelectorAll(".whats").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const plano = btn.getAttribute("data-plano");
-      const preco = btn.getAttribute("data-preco");
-
-      const mensagem = `
-🔥 Novo plano mensal escolhido!
-✂️ *${plano}* - ${preco}
-
-💈 Quero garantir minha mensalidade!
-
-        MEU NOME É: 
-        ENDEREÇO: 
-        CPF: 
-        DATA HOJE:
-      `.trim();
-
-      const url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
-
-      window.open(url, "_blank");
-    });
-  });
-</script>
-
-<iframe src="https://widget.tagembed.com/310212?website=1" style="width:100%;height:100%;overflow:auto;border:none;"></iframe>
-
-
-
-
+  <footer class="page-footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="index.html">ALEWON<span>BARBER</span></a>
+      <p>© <span id="currentYear">2026</span> Alewon Barber — Todos os direitos reservados. <span style="color: orangered;text-decoration: none;"><a href="https://www.linkedin.com/in/carlos-sena-creatorweb/" style="text-decoration:none; color:oranje">Criado por Carlos Sena</a></span></p>
+      <a href="index.html">Voltar ao site principal</a>
+    </div>
+  </footer>
+  <script src="planos.js" defer></script>
+</body>
+</html>

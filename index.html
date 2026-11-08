@@ -1,377 +1,160 @@
-  <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="aleownbarber.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Konkhmer+Sleokchher&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-  <title> Alebarber </title>
-  </head>
-
-
-
-  <body>
-    <header class="hero">
-  <!-- MENU HAMBÚRGUER RESPONSIVO COMPLETO -->
-
-  <!-- 🔹 HTML DO MENU -->
-  <header class="header">
-    <nav class="navbar">
-      <h1 class="logo">Alewon Barber</h1>
-
-      <!-- Botão Hamburguer -->
-      <div class="hamburguer" id="btnMenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <!-- Links do Menu -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Cortes e cuidados masculinos em domicílio. Confira os serviços, preços e agende seu horário com a Alewon Barber.">
+  <title>Alewon Barber | Cortes a domicílio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="aleownbarber.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegação principal">
+      <a class="logo" href="#inicio" aria-label="Alewon Barber - início">ALEWON<span>BARBER</span></a>
+      <button class="menu-toggle" id="btnMenu" type="button" aria-label="Abrir menu" aria-controls="menuMobile" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <ul class="menu" id="menuMobile">
-        <li><a href="#frame1">Início</a></li>
-        <li><a href="#frame2">Serviços</a></li>
-        <li><a href="#frame5">Avaliações</a></li>
-        <li><a href="#frame6">Contato</a></li>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#agendamento">Agendamento</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- 🔹 CSS DO MENU HAMBÚRGUER -->
-  <style>
-    .header {
-      background: #111;
-    }
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-shade"></div>
+      <div class="hero-content container">
+        <p class="eyebrow">BARBEARIA NA SUA CASA</p>
+        <h1>Seu estilo.<br><span>Do seu jeito.</span></h1>
+        <p class="hero-copy">Cuidado de barbearia, conforto de casa. Escolha seu serviço e marque seu próximo corte.</p>
+        <a class="button button-primary" href="#agendamento">Agendar meu horário <span aria-hidden="true">→</span></a>
+        <p class="hero-note">Atendimento a domicílio · Seg a dom</p>
+      </div>
+      <a class="scroll-cue" href="#servicos" aria-label="Conheça os serviços">↓</a>
+    </section>
 
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    <section class="section gallery-section" id="trabalhos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">NA RÉGUA</p>
+          <h2>Ostentação em cada <span>corte.</span></h2>
+          <p>Capricho nos detalhes e os melhores equipamentos para valorizar seu estilo.</p>
+        </div>
+        <div class="gallery-grid reveal">
+          <img src="cliente1.png" alt="Corte masculino feito pela Alewon Barber" loading="lazy">
+          <img src="cliente2.png" alt="Detalhe de corte e acabamento" loading="lazy">
+          <img src="cliente3.png" alt="Resultado de corte masculino" loading="lazy">
+          <img src="cliente4.png" alt="Corte com acabamento personalizado" loading="lazy">
+          <img src="cliente5.png" alt="Cliente com corte finalizado" loading="lazy">
+          <img src="cliente6.png" alt="Trabalho da Alewon Barber" loading="lazy">
+        </div>
+      </div>
+    </section>
 
+    <section class="section services-section" id="servicos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">ESCOLHA SEU CUIDADO</p>
+          <h2>Serviços & <span>valores</span></h2>
+          <p>Sem surpresas: confira os preços e selecione o serviço no formulário.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal"><span class="service-number">01</span><h3>Corte simples</h3><p>Corte personalizado com acabamento caprichado.</p><div class="service-bottom"><strong>R$ 30,00</strong><a href="#agendamento" data-service="Corte Simples">Agendar <span aria-hidden="true">↗</span></a></div></article>
+          <article class="service-card reveal"><span class="service-number">02</span><h3>Barba</h3><p>Alinhamento e cuidado para manter seu visual em dia.</p><div class="service-bottom"><strong>R$ 20,00</strong><a href="#agendamento" data-service="Barba">Agendar <span aria-hidden="true">↗</span></a></div></article>
+          <article class="service-card reveal"><span class="service-number">03</span><h3>Corte + barba</h3><p>Combo completo para renovar o visual.</p><div class="service-bottom"><strong>R$ 45,00</strong><a href="#agendamento" data-service="Corte + Barba">Agendar <span aria-hidden="true">↗</span></a></div></article>
+          <article class="service-card reveal"><span class="service-number">04</span><h3>Sobrancelha</h3><p>Acabamento preciso para completar seu estilo.</p><div class="service-bottom"><strong>R$ 10,00</strong><a href="#agendamento" data-service="Sobrancelha">Agendar <span aria-hidden="true">↗</span></a></div></article>
+          <article class="service-card reveal"><span class="service-number">05</span><h3>Hidratação</h3><p>Um cuidado extra para os fios.</p><div class="service-bottom"><strong>R$ 15,00</strong><a href="#agendamento" data-service="Hidratação">Agendar <span aria-hidden="true">↗</span></a></div></article>
+          <article class="service-card reveal"><span class="service-number">06</span><h3>Completo</h3><p>Uma experiência completa de cuidado e estilo.</p><div class="service-bottom"><strong>R$ 60,00</strong><a href="#agendamento" data-service="Completo">Agendar <span aria-hidden="true">↗</span></a></div></article>
+          <article class="service-card service-card-featured reveal"><span class="service-number">07</span><h3>Tratamento VIP</h3><p>Tratamento especial para quem merece um cuidado a mais.</p><div class="service-bottom"><strong>R$ 75,00</strong><a href="#agendamento" data-service="Tratamento VIP">Agendar <span aria-hidden="true">↗</span></a></div></article>
+        </div>
+        <div class="plans-callout reveal">
+          <div><p class="eyebrow">CUIDADO RECORRENTE</p><h3>Conheça os planos mensais VIP</h3><p>Mais praticidade para manter o visual sempre em dia.</p></div>
+          <div class="plans-links"><a class="button button-outline" href="testeplanomensal.html">Planos cabelo</a><a class="button button-outline" href="planomensal-cabelo-barba.html">Planos cabelo + barba</a></div>
+        </div>
+      </div>
+    </section>
 
-    /* estilo do botão hamburguer */
-    .hamburguer {
-      display: none;
-      flex-direction: column;
-      gap: 6px;
-      cursor: pointer;
-    }
+    <section class="section booking-section" id="agendamento">
+      <div class="container booking-layout">
+        <div class="booking-intro reveal">
+          <p class="eyebrow">SEU PRÓXIMO CORTE COMEÇA AQUI</p>
+          <h2>Faça seu <span>agendamento</span></h2>
+          <p>Preencha seus dados e escolha o serviço, a data e o horário desejados. Seu pedido será preparado no WhatsApp para você revisar e enviar.</p>
+          <div class="booking-promo"><strong>10% OFF</strong><span>por indicação de um amigo.</span></div>
+        </div>
+        <form class="booking-form reveal" id="formAgenda">
+          <div class="form-grid">
+            <label class="field">Nome completo<input type="text" name="nome" autocomplete="name" placeholder="Como podemos te chamar?" required></label>
+            <label class="field">WhatsApp<input type="tel" name="whatsapp" autocomplete="tel" placeholder="(11) 99999-9999" required></label>
+            <label class="field field-wide">Endereço do atendimento<input type="text" name="endereco" autocomplete="street-address" placeholder="Rua, número, bairro e cidade" required></label>
+            <label class="field">Data desejada<input type="date" name="data" id="data" required></label>
+            <label class="field">Horário desejado<input type="time" name="horario" required></label>
+            <label class="field field-wide">Serviço
+              <select name="servico" id="servico" required>
+                <option value="" data-preco="0">Selecione um serviço</option>
+                <option value="Corte Simples" data-preco="30">Corte simples — R$ 30,00</option>
+                <option value="Barba" data-preco="20">Barba — R$ 20,00</option>
+                <option value="Corte + Barba" data-preco="45">Corte + barba — R$ 45,00</option>
+                <option value="Sobrancelha" data-preco="10">Sobrancelha — R$ 10,00</option>
+                <option value="Hidratação" data-preco="15">Hidratação — R$ 15,00</option>
+                <option value="Completo" data-preco="60">Completo — R$ 60,00</option>
+                <option value="Tratamento VIP" data-preco="75">Tratamento VIP — R$ 75,00</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-total"><span>Valor do serviço</span><strong>R$ <span id="total">0,00</span></strong></div>
+          <button class="button button-primary form-submit" type="submit">Continuar pelo WhatsApp <span aria-hidden="true">→</span></button>
+          <p class="form-note">O horário só será confirmado após o barbeiro responder pelo WhatsApp.</p>
+          <p class="form-status" id="confirmacao" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
 
-    .hamburguer span {
-      width: 28px;
-      height: 2px;
-      background: white;
-      border-radius: 5px;
-      transition: .3s;
-    }
+    <section class="section reviews-section" id="avaliacoes">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">QUEM JÁ SENTOU NA CADEIRA</p>
+          <h2>Feedbacks de <span>clientes</span></h2>
+        </div>
+        <div class="reviews-widget">
+          <script src="https://elfsightcdn.com/platform.js" async></script>
+          <div class="elfsight-app-ef64c433-8035-4c97-a576-63ac4b4db4a5" data-elfsight-app-lazy></div>
+        </div>
+      </div>
+    </section>
 
-    /* lista padrão desktop */
-    .menu {
-      list-style: none;
-      display: flex;
-      gap: 2px;
-      transition: 1.0 ease;
-    }
-    
+    <section class="section contact-section" id="contato">
+      <div class="container contact-layout">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">VAMOS CONVERSAR</p>
+          <h2>Atendimento <span>na sua região</span></h2>
+          <p>Entre em contato para tirar dúvidas ou combinar seu atendimento a domicílio.</p>
+          <ul class="contact-list">
+            <li><span>WhatsApp</span><a href="https://wa.me/5511960248301">11 96024-8301</a></li>
+            <li><span>Disponibilidade</span><strong>Segunda a domingo</strong></li>
+            <li><span>Instagram</span><a href="https://www.instagram.com/aleown_barber/" target="_blank" rel="noopener noreferrer">@aleown_barber</a></li>
+          </ul>
+        </div>
+        <iframe class="map-frame reveal" title="Mapa da região de atendimento em Guaianases, São Paulo" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14627.536686082023!2d-46.41557279560646!3d-23.5726031434336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce659ca591b7a9%3A0xacc2483060dcb157!2sGuaianases%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1763505908717!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
 
-    .menu li a {
-      font-family: "Konkhmer Sleokchher", system-ui;;
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    /* MOBILE */
-    @media(max-width: 768px) {
-      .hamburguer { display: flex; }
-
-      .menu {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 200px;
-        background: #111;
-        flex-direction: column;
-        display: none;
-        padding: 20px;
-        gap: 20px;
-        border-left: 2px solid #FF6C11;
-        border-bottom: 2px solid #FF6C11;
-      }
-
-      .menu.show {
-        display: flex;
-      }
-    }
-  </style>
-
-  <!-- 🔹 JAVASCRIPT PARA FUNCIONAR -->
-  <script>
-    const btn = document.getElementById("btnMenu");
-    const menu = document.getElementById("menuMobile");
-
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("show");
-    });
-  </script>
-      <div id="diminuir">
-      <img class="foto" src="fotoatualizada.png">
-      
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="logo" href="#inicio">ALEWON<span>BARBER</span></a>
+      <p>© <span id="currentYear">2026</span> Alewon Barber — Todos os direitos reservados. <span style="color: orangered;text-decoration: none;"><a href="https://www.linkedin.com/in/carlos-sena-creatorweb/" style="text-decoration:none; color:oranje">Criado por Carlos Sena</a></span></p>
+      <a href="#inicio">Voltar ao topo ↑</a>
     </div>
-
-    <h1 class="cortes">Cortes à Domicílio</h1>
-    <img class="linha" src="linhared.png">
-
-    <button class="bota1">
-      <a href="#frame4" class="botaoo">Faça seu agendamento</a>
-    </button>
-    </header>
-
-    <section id="frame2">
-      <h1 class="text2"><span class="o">O</span>stentação<br></h1><h1 class="text3">em cada<span class="c">C</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="orte">orte</span></h1>
-
-      <div class="linhafina"></div>
-
-
-<div class="img-shine">
-      <table>
-        <tr>
-          <td id="trabalhos">
-
-        <img class="trab" src="cliente1.png">
-        <img class="trab" src="cliente2.png">
-  <img class="trab" src="cliente3.png" >
-  </td>
-
-  <td>
-  <img class="trab" src="cliente4.png">
-  <img class="trab" src="cliente5.png">
-  <img class="trab" src=cliente6.png>
-  </td>
-  </tr>
-  </table>
-  <div>
-      
-
-      <div class="linhafina2"></div>
-
-      <h1 class="text4"> com os <span class="laranja"> Melhores<br>Equipamentos</span></h1>
-    </section>
-
-    <section id="frame3">
-      <h1 class="text5"> Tabela de Precificação</h1>
-
-   <table class="tabela" width="100%" cellspacing="0" cellpadding="6" border="0">
-    <tr>
-      <td>Corte Simples</td>
-      <td align="right"><b>R$ 30,00</b></td>
-    </tr>
-
-    <tr>
-      <td>Barba</td>
-      <td align="right"><b>R$ 20,00</b></td>
-    </tr>
-
-    <tr>
-      <td>Corte+Barba</td>
-      <td align="right"><b>R$ 45,00</b></td>
-    </tr>
-
-      <tr>
-      <td>Sombrancelha</td>
-      <td align="right"><b>R$ 10,00</b></td>
-    </tr>
-
-    <tr>
-      <td>Hidratação</td>
-      <td align="right"><b>R$ 15,00</b></td>
-    </tr>
-
-    <tr>
-      <td>Completo</td>
-      <td align="right"><b>R$ 60,00</b></td>
-    </tr>
-
-    <tr>
-      <td>Tratamento VIP</td>
-      <td align="right"><b>R$ 75,00</b></td>
-    </tr>
-
-  </table>
-
-  <button class="butaovip"> <a class="botaopraia" href="testeplanomensal.html">CONHEÇA A MENSALIDADE VIP<br>CABELOS</a></button>
-  <button class="butaovip"> <a class="botaopraia2" href="planomensal-cabelo-barba.html">CONHEÇA A MENSALIDADE VIP<br>CABELOS+BARBA</a></button>
-
-
-  <img class="alepraia" src="alepraia.png">
-    </section>
-
-    <section id="frame4">
-      <h1 class="text6">Faça seu<span class="agendamento">Agendamento</span></h1>
-
-      <div class="secao-form">
-
-  <form id="formAgenda">
-    <label>Nome:</label><br>
-    <input type="text" id="nome" required><br><br>
-
-    <label>Endereço:</label><br>
-    <input type="text" id="endereco" required><br><br>
-
-    <label>WhatsApp:</label><br>
-    <input type="text" id="whatsapp" required><br><br>
-
-    <label>Data do Corte:</label><br>
-    <input type="date" id="data" required><br><br>
-
-    <label>Horário:</label><br>
-    <input type="time" id="horario" required><br><br>
-
-    <label>Serviço:</label><br>
-    <select id="servico" onchange="calcularTotal()" required>
-      <option value="" data-preco="0">Selecione...</option>
-      <option value="Corte" data-preco="30">Corte — R$ 30</option>
-      <option value="Barba" data-preco="20">Barba — R$ 20</option>
-      <option value="Corte + Barba" data-preco="45">Corte + Barba — R$ 45</option>
-      <option value="Sobrancelha" data-preco="10">Sobrancelha — R$ 10</option>
-    </select>
-    <br><br>
-
-    <label>Extras:</label><br>
-    <input type="checkbox" class="extra" value="Hidratação" data-preco="15" onchange="calcularTotal()"> Hidratação — R$ 15 <br>
-    <input type="checkbox" class="extra" value="Peeling Facial" data-preco="25" onchange="calcularTotal()"> Peeling Facial — R$ 25 <br>
-    <!-- <input type="checkbox" class="extra" value="Massagem Facial" data-preco="15" onchange="calcularTotal()"> Massagem Facial — R$ 15 <br> -->
-    <br>
-
-    <h3>Total: R$ <span id="total">0</span></h3>
-
-    <button type="button" onclick="enviarWhatsApp()">Agendar</button>
-  </form>
-
-  <p id="confirmacao" style="color:green; font-weight:bold;"></p>
-
-  <script>
-  function calcularTotal() {
-    let total = 0;
-
-    // Serviço
-    const servico = document.getElementById("servico");
-    total += Number(servico.options[servico.selectedIndex].dataset.preco);
-
-    // Extras
-    const extras = document.querySelectorAll(".extra:checked");
-    extras.forEach(e => {
-      total += Number(e.dataset.preco);
-    });
-
-    document.getElementById("total").innerText = total;
-  }
-
-  function enviarWhatsApp() {
-    const nome = document.getElementById("nome").value;
-    const endereco = document.getElementById("endereco").value;
-    const whatsapp = document.getElementById("whatsapp").value;
-    const data = document.getElementById("data").value;
-    const horario = document.getElementById("horario").value;
-
-    const servicoSelect = document.getElementById("servico");
-    const servico = servicoSelect.value;
-
-    const extrasSelecionados = [];
-    document.querySelectorAll(".extra:checked").forEach(e => extrasSelecionados.push(e.value));
-
-    const total = document.getElementById("total").innerText;
-
-    if (!nome || !endereco || !whatsapp || !data || !horario || !servico) {
-      alert("Por favor, preencha todos os campos obrigatórios.");
-      return;
-    }
-
-    let mensagem = 
-      "✨ Novo Agendamento! ✂%0A%0A" +
-      "Cliente: " + nome + "%0A" +
-      "Endereço: " + endereco + "%0A" +
-      "WhatsApp: " + whatsapp + "%0A" +
-      "Data: " + data + "%0A" +
-      "Horário: " + horario + "%0A" +
-      "Serviço: " + servico + "%0A" +
-      "Extras: " + (extrasSelecionados.length ? extrasSelecionados.join(", ") : "Nenhum") + "%0A%0A" +
-      "Total: R$ " + total;
-
-    const numeroBarbeiro = "5511960248301"; // EX: 5581988877665
-
-    // Enviar para WhatsApp
-    const url = "https://wa.me/" + numeroBarbeiro + "?text=" + mensagem;
-    window.open(url, "_blank");
-
-    // Mensagem de confirmação
-    document.getElementById("confirmacao").innerText = "Agendamento confirmado! Seu barbeiro recebeu todas as informações.";
-  }
-  </script>
-
-  <h3 class="descontos">Ganhe Descontos!</h3>
-  <p class="off">Garanta 10% OFF por indicação</p>
-    </section>
-
-    <section id="frame5">
-      
-      <h1 class="fbs">Feedbacks<span class="clientes">Clientes</span></h1>
-      <section id="reviews-section" class="reviews-container">
-  <div class="reviews-container">
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-ef64c433-8035-4c97-a576-63ac4b4db4a5" data-elfsight-app-lazy></div>
-    </section>
-
-    <section id="frame6">
-      <h1 class="informacoes"> Informações</h1>
-
-      <ul class="info">
-        <li>contato:<a class="link" href="http://Wa.me/5511960248301">11 96024-8301</a></li>
-        <li>disponibilidade: Seg-Dom</li>
-        <li>Instagram:<a class="link" href="https://www.instagram.com/aleown_barber?igsh=MTZ4ZzQ3NnUzbWNkcg==">Aleown_barber</a></li>
-
-      </ul>
-
-      <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14627.536686082023!2d-46.41557279560646!3d-23.5726031434336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce659ca591b7a9%3A0xacc2483060dcb157!2sGuaianases%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1763505908717!5m2!1spt-BR!2sbr" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-
-    <footer class="rodape">
-    <p>© 2025 Alewon Barber — Todos os direitos reservados.</p>
-    <p>Desenvolvido por <span class="autor">Max Virelli</span></p>
   </footer>
-
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.min.js"></script>
-
-<script>
-  const supabaseUrl = 'https://inzmdbolriakuqvvsvci.supabase.co';
-  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imluem1kYm9scmlha3VxdnZzdmNpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ5NDU2NDQsImV4cCI6MjA4MDUyMTY0NH0.y1CUmhrQubRZZPpFnpPITINJnWfuABK1cqGjCUE-Zlg';
-  const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
-</script>
-
-<script>
-async function teste() {
-  const { data, error } = await supabase
-    .from("agendamentos")
-    .insert([
-      {
-        nome: "AleB123",
-        data: "2025-05-21",
-        hora: "14:00",
-        servico: "Corte masculino"
-      }
-    ])
-
-  console.log("data:", data);
-  console.log("error:", error);
-}
-
-teste();
-</script>
-
-
-
-  </body>
-
+  <script src="scriptt.js" defer></script>
+</body>
+</html>
